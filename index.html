@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javier Estrepo - Avalúos Profesionales | Lonja</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5f8d 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #FFD700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a3a52;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20ba58;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5f8d 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #FFD700;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #FFD700;
+            color: #1a3a52;
+        }
+
+        .btn-primary:hover {
+            background: #FFC700;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1a3a52;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* ===== SERVICIOS ===== */
+        .servicios {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a3a52;
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .servicio-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 4px solid #2c5f8d;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+            border-top-color: #FFD700;
+        }
+
+        .servicio-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .servicio-card h3 {
+            color: #1a3a52;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .servicio-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== PROCESO ===== */
+        .proceso {
+            padding: 5rem 0;
+        }
+
+        .proceso-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .paso {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .paso-numero {
+            width: 60px;
+            height: 60px;
+            background: #2c5f8d;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        .paso h3 {
+            color: #1a3a52;
+            margin-bottom: 1rem;
+        }
+
+        .paso p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* ===== CASOS DE ÉXITO ===== */
+        .casos {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .casos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .caso-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .caso-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #2c5f8d, #FFD700);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .caso-info h4 {
+            color: #1a3a52;
+            margin-bottom: 0.2rem;
+        }
+
+        .caso-info p {
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        .caso-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .rating {
+            color: #FFD700;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        /* ===== FORMULARIO ===== */
+        .contacto {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5f8d 100%);
+            color: white;
+        }
+
+        .contacto .section-title {
+            color: white;
+        }
+
+        .formulario {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255,215,0,0.3);
+        }
+
+        .form-submit {
+            background: #FFD700;
+            color: #1a3a52;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .form-submit:hover {
+            background: #FFC700;
+            transform: translateY(-2px);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1a3a52;
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #FFD700;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: #FFD700;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* ===== ANIMACIONES ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .servicio-card, .paso, .caso-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* ===== WHATSAPP FLOTANTE ===== */
+        .whatsapp-flotante {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+
+        .whatsapp-flotante:hover {
+            background: #20ba58;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-flotante {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            header .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">JR</div>
+                    <span>Javier Restrepo Tabares</span>
+                </div>
+                <nav>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#proceso">Proceso</a>
+                    <a href="#caso">Casos</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="https://wa.me/573108338666" class="whatsapp-btn">
+                        💬 WhatsApp
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Avalúos Profesionales de Confianza</h1>
+            <p>40+ años de experiencia | Certificado ANA AVAL-70072122</p>
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">Sabaneta, Antioquia | Carrera 39A # 61B Sur - 135</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">40.</div>
+                    <div class="stat-label">A�os de Experiencia</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Avalúos Completados</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Entrega R��pida</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Tipos de Avalúos</div>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#contacto" class="btn btn-primary">Solicitar Avalúo</a>
+                <a href="https://wa.me/573108338666" class="btn btn-secondary">Consulta R��pida</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicuos</h2>
+            <div class="services-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">🏠</div>
+                    <h3>Avalúo Residencial</h3>
+                    <p>Tasación profesional de propiedades residenciales para compraventa, hipoteca o seguros.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">🏢</div>
+                    <h3>Avalúo Comercial</h3>
+                    <p>Evaluación integral de propiedades comerciales, locales y edificios de inversión.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">🏭</div>
+                    <h3>Avalúo Industrial</h3>
+                    <p>Tasación de naves industriales, bodegas y espacios de producción.</p>
+                </div>
+                <div class="serviceo-card">
+                    <div class="serviceo-icon">🌾</div>
+                    <h3>Avalúo Agrícola</h3>
+                    <p>Valuación de tierras, fincas y propiedades rurales.</p>
+                </div>
+                <div class="serviceo-card">
+                    <div class="serviceo-icon">⚖️</div>
+                    <h3>Avalúo Legal</h3>
+                    <p>Tasaciones requeridas para procesos legales y litigios inmobiliarios.</p>
+                </div>
+                <div class="serviceo-card">
+                    <div class="serviceo-icon">🏦</div>
+                    <h3>Avalúo para Hipoteca</h3>
+                    <p>Evaluaciones aceptadas por entidades financieras y bancos.</p>
+                </div>
+                <div class="serviceo-card">
+                    <div class="serviceo-icon">🛡️</div>
+                    <h3>Avalúo para Seguros</h3>
+                    <p>Tasaciones para pólizas de seguros de propiedades.</p>
+                </div>
+                <div class="serviceo-card">
+                    <div class="serviceo-icon">💼</div>
+                    <h3>Avalúo Corporativo</h3>
+                    <p>Valuación de portafolios inmobiliarios empresariales.</p>
+                </div>
+                <div class="serviceo-card">
+                    <div class="serviceo-icon">📊</div>
+                    <h3>Estudios de Mercado</h3>
+                    <p>Análisis de mercado inmobiliario y tendencias de precios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="proceso" id="proceso">
+        <div class="container">
+            <h2 class="section-title">Nuestro Proceso</h2>
+            <div class="proceso-grid">
+                <div class="paso">
+                    <div class="paso-numero">1</div>
+                    <h3>Consulta Inicial</h3>
+                    <p>Contacto y recopilación de información sobre la propiedad a avaluar.</p>
+                </div>
+                <div class="paso">
+                    <div class="paso-numero">2</div>
+                    <h3>Inspección Física</h3>
+                    <p>Visita profesional a la propiedad para evaluación detallada.</p>
+                </div>
+                <div class="paso">
+                    <div class="paso-numero">3</div>
+                    <h3>Análisis de Mercado</h3>
+                    <p>Investigación de precios comparables en la zona.</p>
+                </div>
+                <div class="paso">
+                    <div class="paso-numero">4</div>
+                    <h3>Cálculo de Valor</h3>
+                    <p>Aplicación de metodologías profesionales de valuación.</p>
+                </div>
+                <div class="paso">
+                    <div class="paso-numero">5</div>
+                    <h3>Redacción del Informe</h3>
+                    <p>Elaboración del documento técnico con toda la información.</p>
+                </div>
+                <div class="paso">
+                    <div class="paso-numero">6</div>
+                    <h3>Entrega y Asesoría</h3>
+                    <p>Entrega del avalúo y explicación de resultados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section class="casos" id="caso">
+        <div class="container">
+            <h2 class="section-title">Casos de Éxito</h2>
+            <div class="casos-grid">
+                <div class="caso-card">
+                    <div class="caso header">
+                        <div class="avatar">CM</div>
+                        <div class="caso info">
+                            <h4>Carlos Méndez</h4>
+                            <p>Bogotá - 2024</p>
+                        </div>
+                    </div>
+                    <p>"El avalúo de Javier fue clave para cerrar nuestra transacción inmobiliaria. Profesional, rápido y confiable. Altamente recomendado."</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <div class="caso-card">
+                    <div class="caso header">
+                        <div class="avatar">CR</div>
+                        <div class="caso info">
+                            <h4>Catalina Rojas</h4>
+                            <p>Medellín - 2024</p>
+                        </div>
+                    </div>
+                    <p>"Necesitaba un avalúo urgente para refinanciar mi propiedad. Javier entregó en 24 horas sin comprometer la calidad. Excelente servicio."</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <div class="caso-card">
+                    <div class="caso header">
+                        <div class="avatar">RG</div>
+                        <div class="caso info">
+                            <h4>Roberto García</h4>
+                            <p>Cali - 2024</p>
+                        </div>
+                    </div>
+                    <p>"Para mi inversión inmobiliaria necesitaba análisis de múltiples propiedades. Javier nos asesoró magistralmente. Un profesional de verdad."</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Solicita Tu Avalúo</h2>
+            <form class="formulario" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="nombre">Tu Nombre *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="propiedad">Tipo de Propiedad *</label>
+                    <input type="text" id="propiedad" name="propiedad" placeholder="Ej: Apartamento, Casa, Comercial" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Detalles Adicionales</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más sobre la propiedad..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">Enviar Solicitud</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Javier Estrepo</h4>
+                    <p>Avaluador profesional certificado con 40+ años de experiencia en el mercado inmobiliario colombiano.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <p><a href="#servicios">Avalúos Residenciales</a></p>
+                    <p><a href="#servicios">Avalúos Comerciales</a></p>
+                    <p><a href="#servicios">Estudios de Mercado</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📞 Teléfono: +57 310 833 8666</p>
+                    <p>📧 Email: jrtcia@gmail.com</p>
+                    <p><a href="https://wa.me/573108338666">💬 WhatsApp: +57 310 833 8666</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Javier Estrepo - Avalúos Profesionales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/573108338666" class="whatsapp-flotante" title="Contáctanos por WhatsApp">
+        💬
+    </a>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const propiedad = document.getElementById('propiedad').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            const mensaje_completo = `Hola Javier, tengo una solicitud de avalúo.
+Nombre: ${nombre}
+Email: ${email}
+Teléfono: ${telefono}
+Tipo de Propiedad: ${propiedad}
+Detalles: ${mensaje}`;
+
+            const whatsapp_url = `https://wa.me/573108338666?text=${encodeURIComponent(mensaje_completo)}`;
+            window.open(whatsapp_url, '_blank');
+
+            alert('¡Mensaje enviado! Se abrirá WhatsApp para confirmar tu solicitud.');
+            document.querySelector('.formulario').reset();
+        }
+    </script>
+</body>
+</html>
