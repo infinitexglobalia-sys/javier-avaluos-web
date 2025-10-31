@@ -1024,6 +1024,160 @@
     </nav>
 
     <section style="position: relative" class="hero">
+
+        <!-- Floating 3D Icons - IMPROVED VISIBILITY -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 10;">
+            <!-- Edificio 1 -->
+            <div style="position: absolute; top: 20%; left: 15%; animation: float-spin-1 15s infinite ease-in-out; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="15" width="40" height="55" fill="white" opacity="0.95" stroke="white" stroke-width="3" rx="2"/>
+                    <rect x="26" y="22" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="38" y="22" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="50" y="22" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="26" y="32" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="38" y="32" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="50" y="32" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="26" y="42" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="38" y="42" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="50" y="42" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="26" y="52" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="38" y="52" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="50" y="52" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="32" y="60" width="16" height="10" fill="#764ba2" opacity="0.9"/>
+                </svg>
+            </div>
+
+            <!-- Casa 1 -->
+            <div style="position: absolute; bottom: 25%; right: 12%; animation: float-spin-2 18s infinite ease-in-out; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));">
+                <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M37.5 18 L58 35 L58 62 L17 62 L17 35 Z" fill="white" opacity="0.95" stroke="white" stroke-width="3"/>
+                    <rect x="30" y="45" width="15" height="17" fill="#764ba2" opacity="0.9"/>
+                    <rect x="22" y="38" width="10" height="10" fill="#f093fb" opacity="0.8"/>
+                    <rect x="43" y="38" width="10" height="10" fill="#f093fb" opacity="0.8"/>
+                    <path d="M13 35 L37.5 13 L62 35" stroke="white" stroke-width="4" fill="none"/>
+                    <circle cx="37.5" cy="52" r="2" fill="white"/>
+                </svg>
+            </div>
+
+            <!-- Edificio 2 -->
+            <div style="position: absolute; top: 50%; right: 8%; animation: float-spin-3 20s infinite ease-in-out; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));">
+                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="18" y="12" width="34" height="50" fill="white" opacity="0.92" stroke="white" stroke-width="2.5" rx="2"/>
+                    <rect x="23" y="18" width="6" height="6" fill="#f5576c" opacity="0.8"/>
+                    <rect x="32" y="18" width="6" height="6" fill="#f5576c" opacity="0.8"/>
+                    <rect x="41" y="18" width="6" height="6" fill="#f5576c" opacity="0.8"/>
+                    <rect x="23" y="27" width="6" height="6" fill="#f5576c" opacity="0.8"/>
+                    <rect x="32" y="27" width="6" height="6" fill="#f5576c" opacity="0.8"/>
+                    <rect x="41" y="27" width="6" height="6" fill="#f5576c" opacity="0.8"/>
+                    <rect x="23" y="36" width="6" height="6" fill="#f5576c" opacity="0.8"/>
+                    <rect x="32" y="36" width="6" height="6" fill="#f5576c" opacity="0.8"/>
+                    <rect x="41" y="36" width="6" height="6" fill="#f5576c" opacity="0.8"/>
+                    <rect x="27" y="48" width="14" height="14" fill="#f093fb" opacity="0.9"/>
+                </svg>
+            </div>
+
+            <!-- Casa 2 -->
+            <div style="position: absolute; bottom: 15%; left: 10%; animation: float-spin-4 16s infinite ease-in-out; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));">
+                <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32.5 15 L50 28 L50 55 L15 55 L15 28 Z" fill="white" opacity="0.92" stroke="white" stroke-width="2.5"/>
+                    <rect x="26" y="40" width="13" height="15" fill="#f5576c" opacity="0.9"/>
+                    <rect x="20" y="33" width="8" height="8" fill="#f093fb" opacity="0.8"/>
+                    <rect x="37" y="33" width="8" height="8" fill="#f093fb" opacity="0.8"/>
+                    <path d="M12 28 L32.5 10 L53 28" stroke="white" stroke-width="3.5" fill="none"/>
+                    <circle cx="32.5" cy="47" r="1.8" fill="white"/>
+                </svg>
+            </div>
+        </div>
+
+        <style>
+            @keyframes float-spin-1 {
+                0% { 
+                    transform: translateY(0px) rotate(0deg) scale(1);
+                    opacity: 0.9;
+                }
+                25% { 
+                    transform: translateY(-30px) rotate(90deg) scale(1.15);
+                    opacity: 1;
+                }
+                50% { 
+                    transform: translateY(-10px) rotate(180deg) scale(1.05);
+                    opacity: 0.95;
+                }
+                75% { 
+                    transform: translateY(-30px) rotate(270deg) scale(1.15);
+                    opacity: 1;
+                }
+                100% { 
+                    transform: translateY(0px) rotate(360deg) scale(1);
+                    opacity: 0.9;
+                }
+            }
+
+            @keyframes float-spin-2 {
+                0% { 
+                    transform: translateY(0px) rotate(0deg) scale(1);
+                    opacity: 0.9;
+                }
+                30% { 
+                    transform: translateY(-35px) rotate(-108deg) scale(1.18);
+                    opacity: 1;
+                }
+                60% { 
+                    transform: translateY(-15px) rotate(-216deg) scale(1.08);
+                    opacity: 0.95;
+                }
+                100% { 
+                    transform: translateY(0px) rotate(-360deg) scale(1);
+                    opacity: 0.9;
+                }
+            }
+
+            @keyframes float-spin-3 {
+                0% { 
+                    transform: translateY(0px) rotate(0deg) scale(0.95);
+                    opacity: 0.85;
+                }
+                33% { 
+                    transform: translateY(-25px) rotate(120deg) scale(1.12);
+                    opacity: 1;
+                }
+                66% { 
+                    transform: translateY(-8px) rotate(240deg) scale(1.02);
+                    opacity: 0.92;
+                }
+                100% { 
+                    transform: translateY(0px) rotate(360deg) scale(0.95);
+                    opacity: 0.85;
+                }
+            }
+
+            @keyframes float-spin-4 {
+                0% { 
+                    transform: translateY(0px) rotate(0deg) scale(1);
+                    opacity: 0.88;
+                }
+                28% { 
+                    transform: translateY(-32px) rotate(-100deg) scale(1.16);
+                    opacity: 1;
+                }
+                56% { 
+                    transform: translateY(-12px) rotate(-200deg) scale(1.06);
+                    opacity: 0.94;
+                }
+                100% { 
+                    transform: translateY(0px) rotate(-360deg) scale(1);
+                    opacity: 0.88;
+                }
+            }
+
+            @media (max-width: 768px) {
+                div[style*="float-spin-3"],
+                div[style*="float-spin-4"] {
+                    display: none !important;
+                }
+            }
+        </style>
+
         <!-- Floating 3D Icons -->
         <div class="floating-icons-container">
             <!-- Edificio -->
@@ -1326,7 +1480,7 @@
                     <p><strong>📍 Ubicación:</strong> Medellín, Colombia</p>
                 </div>
                 <p style="margin-top: 1rem; font-size: 1.1rem; line-height: 1.8;">
-                    Con cuatro décadas de experiencia en ingeniería civil y avalúos inmobiliarios, 
+                    Con 40 años de experiencia en ingeniería civil y avalúos inmobiliarios, 
                     ofrezco servicios profesionales certificados por la Asociación Nacional de Avaluadores (ANA). 
                     Mi compromiso es brindar valoraciones precisas, éticas y respaldadas por la normativa vigente.
                 </p>
@@ -1574,7 +1728,7 @@
     
 
         <!-- Nuestro Trabajo Section -->
-        <section id="portfolio" style="padding: 80px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <section id="portfolio" style="position: relative; padding: 80px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
             <div style="max-width: 1200px; margin: 0 auto;">
                 <div style="text-align: center; margin-bottom: 60px;">
                     <h2 style="font-size: 42px; color: white; margin-bottom: 20px; font-weight: 700;">
@@ -1704,7 +1858,7 @@
                         </h2>
 
                         <p style="font-size: 18px; color: #4a5568; line-height: 1.8; margin-bottom: 30px;">
-                            Con más de <strong style="color: #667eea;">cuatro décadas</strong> en el sector de la construcción y 
+                            Con más de <strong style="color: #667eea;">40 años</strong> en el sector de la construcción y 
                             <strong style="color: #764ba2;">25 años como avaluador certificado</strong>, Javier Restrepo Tabares ofrece el más alto 
                             nivel de precisión y profesionalismo en cada evaluación.
                         </p>
