@@ -334,7 +334,7 @@
             gap: 1rem;
         }
 
-        /* Pre-Avalúo Form Section */
+        /* Form Section */
         .form-section {
             padding: 4rem 2rem;
             background: white;
@@ -866,4 +866,825 @@
         </nav>
     </header>
 
-...
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Avalúos Profesionales Certificados</h1>
+            <p class="hero-subtitle">Más de 15 años de experiencia | Avaluador ANA AVAL-70072122 | Servicio en Medellín y toda Colombia</p>
+
+            <div class="hero-badges">
+                <div class="badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certificado ANA</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-award"></i>
+                    <span>+1000 Avalúos</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-star"></i>
+                    <span>100% Confiable</span>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#pre-avaluo" class="btn-primary">
+                    <i class="fas fa-file-alt"></i>
+                    Pre-Avalúo Gratis
+                </a>
+                <a href="#avaluo-completo" class="btn-secondary">
+                    <i class="fas fa-calculator"></i>
+                    Solicitar Avalúo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sales Funnel Section -->
+    <section id="proceso" class="funnel-section">
+        <h2 class="section-title">¿Cómo Funciona?</h2>
+        <p class="section-subtitle">Proceso simple y transparente en 4 pasos</p>
+
+        <div class="funnel-steps">
+            <!-- Step 1 -->
+            <div class="funnel-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>🎯 Pre-Avalúo Gratis</h3>
+                    <p>Completa nuestro formulario inicial con información básica de tu propiedad. Te daremos una estimación preliminar sin costo.</p>
+                    <a href="#pre-avaluo" class="step-action">
+                        Iniciar Pre-Avalúo <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="funnel-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>📋 Cotización Personalizada</h3>
+                    <p>Recibe una cotización detallada basada en el tipo de propiedad y el propósito del avalúo (venta, hipoteca, sucesión, etc.).</p>
+                    <a href="#avaluo-completo" class="step-action">
+                        Solicitar Cotización <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="funnel-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>🏠 Visita e Inspección</h3>
+                    <p>Coordinamos una visita para inspeccionar la propiedad. Proceso profesional y rápido, con atención a todos los detalles.</p>
+                    <a href="https://wa.me/573000000000" class="step-action">
+                        Agendar Visita <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="funnel-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>✅ Avalúo Certificado</h3>
+                    <p>Entrega del avalúo certificado en máximo 5 días hábiles. Documento técnico con respaldo legal completo.</p>
+                    <a href="#servicios" class="step-action">
+                        Ver Servicios <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Avalúo Form Section -->
+    <section id="pre-avaluo" class="form-section">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>📝 Solicitar Pre-Avalúo Gratis</h2>
+                <p>Obtén una estimación inicial sin costo ni compromiso</p>
+            </div>
+
+            <!-- Form Progress -->
+            <div class="form-progress">
+                <div class="progress-line" id="pre-progress-line" style="width: 0%"></div>
+                <div class="progress-step active" data-step="1">
+                    <div class="progress-circle">1</div>
+                    <span class="progress-label">Datos</span>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="progress-circle">2</div>
+                    <span class="progress-label">Propiedad</span>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="progress-circle">3</div>
+                    <span class="progress-label">Propósito</span>
+                </div>
+            </div>
+
+            <form id="pre-avaluo-form">
+                <!-- Step 1: Datos Personales -->
+                <div class="form-step active" data-step="1">
+                    <div class="form-group">
+                        <label>Nombre Completo <span class="required">*</span></label>
+                        <input type="text" name="nombre" required placeholder="Ej: Juan Pérez">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Teléfono <span class="required">*</span></label>
+                        <input type="tel" name="telefono" required placeholder="Ej: 300 123 4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" name="email" required placeholder="tu@email.com">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-next" onclick="nextStep('pre', 1)">
+                            Siguiente <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Tipo de Propiedad -->
+                <div class="form-step" data-step="2">
+                    <div class="form-group">
+                        <label>Tipo de Propiedad <span class="required">*</span></label>
+                        <div class="property-grid">
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="casa" required>
+                                <div class="property-card">
+                                    <div class="property-icon">🏠</div>
+                                    <div class="property-name">Casa</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="apartamento">
+                                <div class="property-card">
+                                    <div class="property-icon">🏢</div>
+                                    <div class="property-name">Apartamento</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="finca">
+                                <div class="property-card">
+                                    <div class="property-icon">🌳</div>
+                                    <div class="property-name">Finca</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="lote">
+                                <div class="property-card">
+                                    <div class="property-icon">🗺️</div>
+                                    <div class="property-name">Lote</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="oficina">
+                                <div class="property-card">
+                                    <div class="property-icon">🏢</div>
+                                    <div class="property-name">Oficina</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="local">
+                                <div class="property-card">
+                                    <div class="property-icon">🏪</div>
+                                    <div class="property-name">Local</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ubicación (Ciudad) <span class="required">*</span></label>
+                        <input type="text" name="ubicacion" required placeholder="Ej: Medellín, Poblado">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" onclick="prevStep('pre', 2)">
+                            <i class="fas fa-arrow-left"></i> Atrás
+                        </button>
+                        <button type="button" class="btn-next" onclick="nextStep('pre', 2)">
+                            Siguiente <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Propósito del Avalúo -->
+                <div class="form-step" data-step="3">
+                    <div class="form-group">
+                        <label>¿Para qué necesitas el avalúo? <span class="required">*</span></label>
+                        <div class="purpose-grid">
+                            <label class="purpose-option">
+                                <input type="checkbox" name="proposito[]" value="venta">
+                                <div class="purpose-card">
+                                    <div class="purpose-icon">💰</div>
+                                    <div>Venta</div>
+                                </div>
+                            </label>
+
+                            <label class="purpose-option">
+                                <input type="checkbox" name="proposito[]" value="compra">
+                                <div class="purpose-card">
+                                    <div class="purpose-icon">🏡</div>
+                                    <div>Compra</div>
+                                </div>
+                            </label>
+
+                            <label class="purpose-option">
+                                <input type="checkbox" name="proposito[]" value="hipoteca">
+                                <div class="purpose-card">
+                                    <div class="purpose-icon">🏦</div>
+                                    <div>Hipoteca</div>
+                                </div>
+                            </label>
+
+                            <label class="purpose-option">
+                                <input type="checkbox" name="proposito[]" value="sucesion">
+                                <div class="purpose-card">
+                                    <div class="purpose-icon">📜</div>
+                                    <div>Sucesión</div>
+                                </div>
+                            </label>
+
+                            <label class="purpose-option">
+                                <input type="checkbox" name="proposito[]" value="permuta">
+                                <div class="purpose-card">
+                                    <div class="purpose-icon">🔄</div>
+                                    <div>Permuta</div>
+                                </div>
+                            </label>
+
+                            <label class="purpose-option">
+                                <input type="checkbox" name="proposito[]" value="seguro">
+                                <div class="purpose-card">
+                                    <div class="purpose-icon">🛡️</div>
+                                    <div>Seguro</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Comentarios Adicionales</label>
+                        <textarea name="comentarios" rows="4" placeholder="Cuéntanos más detalles sobre tu propiedad..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" onclick="prevStep('pre', 3)">
+                            <i class="fas fa-arrow-left"></i> Atrás
+                        </button>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Enviar Solicitud
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Avalúo Completo Form Section -->
+    <section id="avaluo-completo" class="form-section" style="background: #f9fafb;">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>📊 Solicitar Avalúo Completo</h2>
+                <p>Avalúo certificado con respaldo legal completo</p>
+            </div>
+
+            <!-- Form Progress -->
+            <div class="form-progress">
+                <div class="progress-line" id="avaluo-progress-line" style="width: 0%"></div>
+                <div class="progress-step active" data-step="1">
+                    <div class="progress-circle">1</div>
+                    <span class="progress-label">Contacto</span>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="progress-circle">2</div>
+                    <span class="progress-label">Propiedad</span>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="progress-circle">3</div>
+                    <span class="progress-label">Detalles</span>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="progress-circle">4</div>
+                    <span class="progress-label">Finalizar</span>
+                </div>
+            </div>
+
+            <form id="avaluo-form">
+                <!-- Step 1: Información de Contacto -->
+                <div class="form-step active" data-step="1">
+                    <div class="form-group">
+                        <label>Nombre Completo <span class="required">*</span></label>
+                        <input type="text" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Documento de Identidad <span class="required">*</span></label>
+                        <input type="text" name="documento" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Teléfono <span class="required">*</span></label>
+                        <input type="tel" name="telefono" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-next" onclick="nextStep('avaluo', 1)">
+                            Siguiente <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Tipo de Propiedad -->
+                <div class="form-step" data-step="2">
+                    <div class="form-group">
+                        <label>Tipo de Propiedad <span class="required">*</span></label>
+                        <div class="property-grid">
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="casa_urbana" required>
+                                <div class="property-card">
+                                    <div class="property-icon">🏠</div>
+                                    <div class="property-name">Casa Urbana</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="apartamento">
+                                <div class="property-card">
+                                    <div class="property-icon">🏢</div>
+                                    <div class="property-name">Apartamento</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="finca_rural">
+                                <div class="property-card">
+                                    <div class="property-icon">🌾</div>
+                                    <div class="property-name">Finca Rural</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="lote_urbano">
+                                <div class="property-card">
+                                    <div class="property-icon">🏗️</div>
+                                    <div class="property-name">Lote Urbano</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="lote_rural">
+                                <div class="property-card">
+                                    <div class="property-icon">🗺️</div>
+                                    <div class="property-name">Lote Rural</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="oficina">
+                                <div class="property-card">
+                                    <div class="property-icon">💼</div>
+                                    <div class="property-name">Oficina</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="local_comercial">
+                                <div class="property-card">
+                                    <div class="property-icon">🏪</div>
+                                    <div class="property-name">Local</div>
+                                </div>
+                            </label>
+
+                            <label class="property-option">
+                                <input type="radio" name="tipo_propiedad" value="bodega">
+                                <div class="property-card">
+                                    <div class="property-icon">🏭</div>
+                                    <div class="property-name">Bodega</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" onclick="prevStep('avaluo', 2)">
+                            <i class="fas fa-arrow-left"></i> Atrás
+                        </button>
+                        <button type="button" class="btn-next" onclick="nextStep('avaluo', 2)">
+                            Siguiente <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Detalles de la Propiedad -->
+                <div class="form-step" data-step="3">
+                    <div class="form-group">
+                        <label>Dirección Completa <span class="required">*</span></label>
+                        <input type="text" name="direccion" required placeholder="Calle, carrera, número">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ciudad <span class="required">*</span></label>
+                        <input type="text" name="ciudad" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Área aproximada (m²)</label>
+                        <input type="number" name="area" placeholder="Ej: 120">
+                    </div>
+
+                    <div class="form-group">
+                        <label>¿Para qué necesitas el avalúo? <span class="required">*</span></label>
+                        <select name="proposito" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="venta">Venta</option>
+                            <option value="compra">Compra</option>
+                            <option value="hipoteca">Crédito Hipotecario</option>
+                            <option value="sucesion">Sucesión/Herencia</option>
+                            <option value="permuta">Permuta</option>
+                            <option value="remate">Remate Judicial</option>
+                            <option value="seguro">Seguro</option>
+                            <option value="catastral">Actualización Catastral</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" onclick="prevStep('avaluo', 3)">
+                            <i class="fas fa-arrow-left"></i> Atrás
+                        </button>
+                        <button type="button" class="btn-next" onclick="nextStep('avaluo', 3)">
+                            Siguiente <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Información Adicional -->
+                <div class="form-step" data-step="4">
+                    <div class="form-group">
+                        <label>¿Cuándo necesitas el avalúo?</label>
+                        <select name="urgencia">
+                            <option value="normal">Normal (5 días hábiles)</option>
+                            <option value="express">Express (2-3 días) - Cargo adicional</option>
+                            <option value="urgente">Urgente (24 horas) - Cargo adicional</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Comentarios o Detalles Adicionales</label>
+                        <textarea name="comentarios" rows="4" placeholder="Información adicional que consideres importante..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="acepta_terminos" required style="width: auto; display: inline;">
+                            Acepto los términos y condiciones <span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" onclick="prevStep('avaluo', 4)">
+                            <i class="fas fa-arrow-left"></i> Atrás
+                        </button>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-check-circle"></i> Enviar Solicitud
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Avalúos certificados para todas tus necesidades</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Avalúos Comerciales</h3>
+                    <p>Valoración de propiedades para compra, venta o permuta con certificación completa.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏦</div>
+                    <h3>Avalúos Hipotecarios</h3>
+                    <p>Avalúos para solicitudes de crédito con bancos y entidades financieras.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📜</div>
+                    <h3>Avalúos para Sucesión</h3>
+                    <p>Valoración de bienes inmuebles para procesos de herencia y sucesión.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏛️</div>
+                    <h3>Avalúos Catastrales</h3>
+                    <p>Actualización de valores catastrales ante autoridades municipales.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Avalúos Periciales</h3>
+                    <p>Peritajes técnicos para procesos judiciales y arbitrajes.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌾</div>
+                    <h3>Avalúos Rurales</h3>
+                    <p>Valoración especializada de fincas y propiedades rurales.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Avalúos Comerciales</h3>
+                    <p>Valoración de locales, oficinas y propiedades comerciales.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Avalúos para Seguros</h3>
+                    <p>Valoración de propiedades para pólizas de seguro.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>Asesoría Técnica</h3>
+                    <p>Consultoría especializada en valoración inmobiliaria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            <p class="section-subtitle">Más de 1000 clientes satisfechos</p>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Excelente servicio. El avalúo fue entregado a tiempo y con toda la documentación necesaria para mi crédito hipotecario. Muy profesional."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <h4>María Camila Gómez</h4>
+                            <p>Medellín, El Poblado</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Contraté el servicio para un avalúo de sucesión. Todo el proceso fue claro y transparente. Recomendado 100%."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JR</div>
+                        <div class="author-info">
+                            <h4>Jorge Rodríguez</h4>
+                            <p>Envigado</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Muy buen servicio para avalúo comercial. Precio justo y entrega rápida. Definitivamente volveré a contratarlos."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LP</div>
+                        <div class="author-info">
+                            <h4>Laura Pérez</h4>
+                            <p>Sabaneta</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Javier Restrepo Tabares</h3>
+                <p>Avaluador Profesional Certificado</p>
+                <p>ANA AVAL-70072122</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/573000000000"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#servicios">Avalúos Comerciales</a></li>
+                    <li><a href="#servicios">Avalúos Hipotecarios</a></li>
+                    <li><a href="#servicios">Avalúos Catastrales</a></li>
+                    <li><a href="#servicios">Avalúos Rurales</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +57 300 000 0000</li>
+                    <li><i class="fas fa-envelope"></i> info@javierrestrepo.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Medellín, Colombia</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <ul>
+                    <li>Lunes - Viernes: 8:00 AM - 6:00 PM</li>
+                    <li>Sábados: 9:00 AM - 1:00 PM</li>
+                    <li>Domingos: Cerrado</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Javier Restrepo - Avalúos Profesionales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20solicitar%20un%20avalúo" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Form Step Navigation
+        function nextStep(formType, currentStep) {
+            const form = document.getElementById(`${formType}-${currentStep === 1 ? 'avaluo' : 'avaluo'}-form`);
+            const currentStepEl = form.querySelector(`.form-step[data-step="${currentStep}"]`);
+
+            // Validate current step
+            const inputs = currentStepEl.querySelectorAll('input[required], select[required]');
+            let isValid = true;
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    isValid = false;
+                    input.reportValidity();
+                }
+            });
+
+            if (!isValid) return;
+
+            // Hide current step
+            currentStepEl.classList.remove('active');
+
+            // Show next step
+            const nextStepEl = form.querySelector(`.form-step[data-step="${currentStep + 1}"]`);
+            nextStepEl.classList.add('active');
+
+            // Update progress
+            updateProgress(formType, currentStep + 1);
+        }
+
+        function prevStep(formType, currentStep) {
+            const form = document.getElementById(`${formType === 'pre' ? 'pre-avaluo' : 'avaluo'}-form`);
+
+            // Hide current step
+            const currentStepEl = form.querySelector(`.form-step[data-step="${currentStep}"]`);
+            currentStepEl.classList.remove('active');
+
+            // Show previous step
+            const prevStepEl = form.querySelector(`.form-step[data-step="${currentStep - 1}"]`);
+            prevStepEl.classList.add('active');
+
+            // Update progress
+            updateProgress(formType, currentStep - 1);
+        }
+
+        function updateProgress(formType, step) {
+            const progressSteps = document.querySelectorAll(`#${formType === 'pre' ? 'pre-avaluo' : 'avaluo-completo'} .progress-step`);
+            const totalSteps = progressSteps.length;
+            const progressLine = document.getElementById(`${formType}-progress-line`);
+
+            progressSteps.forEach((stepEl, index) => {
+                if (index < step) {
+                    stepEl.classList.add('completed');
+                    stepEl.classList.remove('active');
+                } else if (index === step - 1) {
+                    stepEl.classList.add('active');
+                    stepEl.classList.remove('completed');
+                } else {
+                    stepEl.classList.remove('active', 'completed');
+                }
+            });
+
+            const progressPercentage = ((step - 1) / (totalSteps - 1)) * 100;
+            progressLine.style.width = `${progressPercentage}%`;
+        }
+
+        // Pre-Avalúo Form Submission
+        document.getElementById('pre-avaluo-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                if (key.includes('[]')) {
+                    const cleanKey = key.replace('[]', '');
+                    if (!data[cleanKey]) data[cleanKey] = [];
+                    data[cleanKey].push(value);
+                } else {
+                    data[key] = value;
+                }
+            });
+
+            console.log('Pre-Avalúo Data:', data);
+
+            // WhatsApp message
+            const message = `Solicitud de Pre-Avalúo:%0A%0A` +
+                `Nombre: ${data.nombre}%0A` +
+                `Teléfono: ${data.telefono}%0A` +
+                `Email: ${data.email}%0A` +
+                `Tipo: ${data.tipo_propiedad}%0A` +
+                `Ubicación: ${data.ubicacion}%0A` +
+                `Propósito: ${data.proposito ? data.proposito.join(', ') : 'N/A'}%0A` +
+                `Comentarios: ${data.comentarios || 'N/A'}`;
+
+            window.open(`https://wa.me/573000000000?text=${message}`, '_blank');
+
+            alert('¡Gracias! Tu solicitud ha sido enviada. Te contactaremos pronto.');
+            this.reset();
+
+            // Reset form steps
+            document.querySelectorAll('#pre-avaluo .form-step').forEach((step, index) => {
+                if (index === 0) step.classList.add('active');
+                else step.classList.remove('active');
+            });
+            updateProgress('pre', 1);
+        });
+
+        // Avalúo Form Submission
+        document.getElementById('avaluo-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+
+            console.log('Avalúo Completo Data:', data);
+
+            // WhatsApp message
+            const message = `Solicitud de Avalúo Completo:%0A%0A` +
+                `Nombre: ${data.nombre}%0A` +
+                `Documento: ${data.documento}%0A` +
+                `Teléfono: ${data.telefono}%0A` +
+                `Email: ${data.email}%0A` +
+                `Tipo: ${data.tipo_propiedad}%0A` +
+                `Dirección: ${data.direccion}%0A` +
+                `Ciudad: ${data.ciudad}%0A` +
+                `Área: ${data.area || 'N/A'} m²%0A` +
+                `Propósito: ${data.proposito}%0A` +
+                `Urgencia: ${data.urgencia}%0A` +
+                `Comentarios: ${data.comentarios || 'N/A'}`;
+
+            window.open(`https://wa.me/573000000000?text=${message}`, '_blank');
+
+            alert('¡Gracias! Tu solicitud ha sido enviada. Te contactaremos pronto con la cotización.');
+            this.reset();
+
+            // Reset form steps
+            document.querySelectorAll('#avaluo-completo .form-step').forEach((step, index) => {
+                if (index === 0) step.classList.add('active');
+                else step.classList.remove('active');
+            });
+            updateProgress('avaluo', 1);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
