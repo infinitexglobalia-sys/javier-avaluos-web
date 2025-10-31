@@ -37,7 +37,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4c51bf 0%, #764ba2 100%);
         }
 
         .navbar {
@@ -57,7 +57,7 @@
         .nav-brand {
             font-size: 1.5rem;
             font-weight: bold;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4c51bf 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -73,7 +73,7 @@
             color: #333;
             text-decoration: none;
             transition: all 0.3s;
-            position: relative;
+            position: relative; z-index: 1;
         }
 
         .nav-links a::after {
@@ -83,7 +83,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4c51bf 0%, #764ba2 100%);
             transition: width 0.3s;
         }
 
@@ -97,7 +97,7 @@
         }
 
         .social-links a {
-            color: #667eea;
+            color: #4c51bf;
             font-size: 1.2rem;
             transition: transform 0.3s;
         }
@@ -112,7 +112,7 @@
             align-items: center;
             justify-content: center;
             padding: 6rem 2rem 2rem;
-            position: relative;
+            position: relative; z-index: 1;
             overflow: hidden;
         }
 
@@ -234,7 +234,7 @@
             text-align: center;
             color: white;
             max-width: 900px;
-            position: relative;
+            position: relative; z-index: 1;
             z-index: 10;
             animation: fadeInUp 1s ease-out;
         }
@@ -270,7 +270,27 @@
             animation: none;
         }
 
-        .ana-badge {
+        
+    .ana-badge {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%);
+        padding: 10px 15px;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #1e3a5f;
+        opacity: 0.9;
+        transition: all 0.3s ease;
+    }
+    .ana-badge:hover {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
             background: white;
             border-radius: 15px;
             padding: 20px;
@@ -280,7 +300,7 @@
         }
 
         .ana-badge h3 {
-            color: #667eea;
+            color: #4c51bf;
             font-size: 1.2rem;
             margin-bottom: 5px;
         }
@@ -292,7 +312,7 @@
         }
 
         .ana-badge .license-number {
-            color: #FFC107;
+            color: #FFD700;
             font-weight: bold;
             font-size: 1.1rem;
             margin-top: 10px;
@@ -313,7 +333,7 @@
         .hero-subtitle {
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            opacity: 0.75;
+            opacity: 0.95;
         }
 
         .cta-buttons {
@@ -324,7 +344,7 @@
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #FFC107 0%, #f6e27a 100%);
+            background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%);
             color: #333;
             padding: 1rem 2.5rem;
             border: none;
@@ -336,7 +356,7 @@
             text-decoration: none;
             display: inline-block;
             font-weight: bold;
-            position: relative;
+            position: relative; z-index: 1;
             overflow: hidden;
         }
 
@@ -382,7 +402,7 @@
 
         .about-image {
             text-align: center;
-            position: relative;
+            position: relative; z-index: 1;
         }
 
         .about-image img {
@@ -398,7 +418,7 @@
         }
 
         .about-content h2 {
-            color: #667eea;
+            color: #4c51bf;
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
@@ -408,7 +428,7 @@
             padding: 1.5rem;
             border-radius: 15px;
             margin: 1rem 0;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #4c51bf;
         }
 
         .credentials p {
@@ -417,7 +437,7 @@
         }
 
         .credentials strong {
-            color: #667eea;
+            color: #4c51bf;
         }
 
         /* Work Gallery Section */
@@ -435,8 +455,8 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #667eea;
-            position: relative;
+            color: #4c51bf;
+            position: relative; z-index: 1;
         }
 
         .section-title::after {
@@ -444,7 +464,7 @@
             display: block;
             width: 100px;
             height: 4px;
-            background: linear-gradient(135deg, #FFC107 0%, #f6e27a 100%);
+            background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%);
             margin: 1rem auto;
             border-radius: 2px;
         }
@@ -461,7 +481,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.3s;
             background: white;
-            position: relative;
+            position: relative; z-index: 1;
             height: 300px;
         }
 
@@ -500,7 +520,7 @@
 
         .work-overlay p {
             font-size: 0.9rem;
-            opacity: 0.7;
+            opacity: 0.9;
         }
 
         /* Team section */
@@ -524,7 +544,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
             transition: all 0.3s;
-            position: relative;
+            position: relative; z-index: 1;
             overflow: hidden;
         }
 
@@ -535,7 +555,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4c51bf 0%, #764ba2 100%);
             transform: scaleX(0);
             transition: transform 0.3s;
         }
@@ -567,7 +587,7 @@
         }
 
         .agent-card h3 {
-            color: #667eea;
+            color: #4c51bf;
             margin-bottom: 0.5rem;
         }
 
@@ -582,13 +602,13 @@
             gap: 2rem;
         }
 
-        .service-card {
+        .service-card { position: relative; z-index: 2;
             background: white;
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s;
-            position: relative;
+            position: relative; z-index: 1;
             overflow: hidden;
         }
 
@@ -619,15 +639,15 @@
         }
 
         .service-card h3 {
-            color: #667eea;
+            color: #4c51bf;
             margin-bottom: 1rem;
         }
 
         /* Form CTA Card Section */
         .form-cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4c51bf 0%, #764ba2 100%);
             padding: 4rem 2rem;
-            position: relative;
+            position: relative; z-index: 1;
             overflow: hidden;
         }
 
@@ -654,7 +674,7 @@
             padding: 3rem;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            position: relative;
+            position: relative; z-index: 1;
             z-index: 1;
             text-align: center;
         }
@@ -665,7 +685,7 @@
         }
 
         .form-cta-card h2 {
-            color: #667eea;
+            color: #4c51bf;
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
@@ -702,7 +722,7 @@
         }
 
         .open-form-button {
-            background: linear-gradient(135deg, #FFC107 0%, #f6e27a 100%);
+            background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%);
             color: #333;
             padding: 1.2rem 3rem;
             border: none;
@@ -747,7 +767,7 @@
             border-radius: 20px;
             max-width: 700px;
             width: 100%;
-            position: relative;
+            position: relative; z-index: 1;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             animation: modalSlideIn 0.3s ease-out;
             max-height: 90vh;
@@ -789,7 +809,7 @@
         }
 
         .form-modal-content h2 {
-            color: #667eea;
+            color: #4c51bf;
             text-align: center;
             margin-bottom: 2rem;
         }
@@ -820,7 +840,7 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #4c51bf;
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
             transform: translateY(-2px);
         }
@@ -831,7 +851,7 @@
         }
 
         .form-submit {
-            background: linear-gradient(135deg, #FFC107 0%, #f6e27a 100%);
+            background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%);
             color: #333;
             padding: 1rem 3rem;
             border: none;
@@ -874,7 +894,7 @@
             border-radius: 20px;
             max-width: 600px;
             width: 90%;
-            position: relative;
+            position: relative; z-index: 1;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             animation: modalSlideIn 0.3s ease-out;
         }
@@ -884,7 +904,7 @@
         }
 
         .license-card .license-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4c51bf 0%, #764ba2 100%);
             color: white;
             padding: 2rem;
             border-radius: 15px 15px 0 0;
@@ -914,7 +934,7 @@
 
         .license-details .label {
             font-weight: bold;
-            color: #667eea;
+            color: #4c51bf;
         }
 
         .license-details .value {
@@ -938,7 +958,7 @@
         }
 
         .footer-section h3 {
-            color: #FFC107;
+            color: #FFD700;
             margin-bottom: 1rem;
         }
 
@@ -949,14 +969,14 @@
 
         .footer-license {
             background: rgba(212, 169, 71, 0.1);
-            border-left: 4px solid #FFC107;
+            border-left: 4px solid #FFD700;
             padding: 1rem;
             margin: 1rem 0;
             text-align: left;
         }
 
         .footer-license strong {
-            color: #FFC107;
+            color: #FFD700;
         }
 
         .footer-social {
@@ -968,7 +988,7 @@
         }
 
         .footer-social a {
-            color: #FFC107;
+            color: #FFD700;
             transition: all 0.3s;
         }
 
@@ -1036,7 +1056,7 @@
 }
 
 html {
-    font-size: 12px; /* Base para rem */
+    font-size: 16px; /* Base para rem */
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 }
@@ -1051,7 +1071,7 @@ body {
 
 /* Banner principal - SIEMPRE arriba */
 header, .banner, .hero, section:first-of-type {
-    position: relative;
+    position: relative; z-index: 1;
     width: 100%;
     min-height: 60vh;
     padding: 2rem 1rem;
@@ -1171,7 +1191,7 @@ p, li {
     input, textarea, select {
         width: 100%;
         min-height: 48px;
-        font-size: 12px; /* Previene zoom en iPhone */
+        font-size: 16px; /* Previene zoom en iPhone */
         padding: 0.75rem;
     }
 }
@@ -1223,7 +1243,7 @@ body, html {
 /* Prevenir scroll horizontal */
 body {
     overflow-x: hidden;
-    position: relative;
+    position: relative; z-index: 1;
 }
 
 /* Touch gestures */
@@ -1427,13 +1447,33 @@ div[style*="float-spin"] svg {
     transform: scale(1.1) !important;
 }
 
-.ana-badge {
+
+    .ana-badge {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%);
+        padding: 10px 15px;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #1e3a5f;
+        opacity: 0.9;
+        transition: all 0.3s ease;
+    }
+    .ana-badge:hover {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
     background: white;
     border-radius: 12px;
     padding: 12px !important;
     box-shadow: 0 8px 30px rgba(0,0,0,0.3);
     text-align: center;
-    border: 2px solid #FFC107;
+    border: 2px solid #FFD700;
 }
 
 .ana-badge h3 {
@@ -1471,7 +1511,27 @@ div[style*="float-spin"] svg {
         max-width: 110px !important;
     }
 
+    
     .ana-badge {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%);
+        padding: 10px 15px;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #1e3a5f;
+        opacity: 0.9;
+        transition: all 0.3s ease;
+    }
+    .ana-badge:hover {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
         padding: 8px !important;
         border-radius: 10px;
     }
@@ -1507,7 +1567,27 @@ div[style*="float-spin"] svg {
         left: 5px !important;
     }
 
+    
     .ana-badge {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%);
+        padding: 10px 15px;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #1e3a5f;
+        opacity: 0.9;
+        transition: all 0.3s ease;
+    }
+    .ana-badge:hover {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
         padding: 6px !important;
     }
 
@@ -1599,7 +1679,7 @@ div[style*="position: absolute"][style*="animation"] {
     .certificado-ana-badge .badge-title {
         font-size: 0.75rem;
         font-weight: 600;
-        color: #4A90E2;
+        color: #2c5282;
         margin: 4px 0;
     }
 
@@ -1618,7 +1698,7 @@ div[style*="position: absolute"][style*="animation"] {
 
     .certificado-ana-badge .badge-link {
         font-size: 0.6rem;
-        color: #4A90E2;
+        color: #2c5282;
         text-decoration: none;
         display: inline-block;
         margin-top: 4px;
@@ -1662,7 +1742,7 @@ div[style*="position: absolute"][style*="animation"] {
     .desarrollo-inmobiliario-section {
         padding: 80px 0;
         background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        position: relative;
+        position: relative; z-index: 1;
         overflow: hidden;
     }
 
@@ -1684,7 +1764,7 @@ div[style*="position: absolute"][style*="animation"] {
         color: #2c3e50;
         text-align: center;
         margin: 60px 0 40px;
-        position: relative;
+        position: relative; z-index: 1;
     }
 
     .subsection-title::after {
@@ -1692,7 +1772,7 @@ div[style*="position: absolute"][style*="animation"] {
         display: block;
         width: 80px;
         height: 4px;
-        background: linear-gradient(90deg, #4A90E2, #FFD700);
+        background: linear-gradient(90deg, #2c5282, #FFD700);
         margin: 15px auto 0;
         border-radius: 2px;
     }
@@ -1722,7 +1802,7 @@ div[style*="position: absolute"][style*="animation"] {
     .profesional-card:hover {
         transform: translateY(-8px);
         box-shadow: 0 8px 24px rgba(74, 144, 226, 0.3);
-        border-color: #4A90E2;
+        border-color: #2c5282;
     }
 
     .profesional-icon {
@@ -1770,7 +1850,7 @@ div[style*="position: absolute"][style*="animation"] {
     }
 
     .factibilidad-card.factibilidad {
-        border-color: #4A90E2;
+        border-color: #2c5282;
         background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
     }
 
@@ -1799,7 +1879,7 @@ div[style*="position: absolute"][style*="animation"] {
     }
 
     .factibilidad-badge.destacado {
-        background: linear-gradient(135deg, #4A90E2, #357ABD);
+        background: linear-gradient(135deg, #2c5282, #1e3a5f);
         color: white;
     }
 
@@ -1857,7 +1937,7 @@ div[style*="position: absolute"][style*="animation"] {
     }
 
     .btn-factibilidad.destacado {
-        background: linear-gradient(135deg, #4A90E2, #357ABD);
+        background: linear-gradient(135deg, #2c5282, #1e3a5f);
     }
 
     /* Proceso de Trabajo */
@@ -1903,7 +1983,7 @@ div[style*="position: absolute"][style*="animation"] {
     .step-number {
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, #4A90E2, #357ABD);
+        background: linear-gradient(135deg, #2c5282, #1e3a5f);
         color: white;
         border-radius: 50%;
         display: flex;
@@ -1929,7 +2009,7 @@ div[style*="position: absolute"][style*="animation"] {
 
     .proceso-arrow {
         font-size: 2rem;
-        color: #4A90E2;
+        color: #2c5282;
         font-weight: 700;
     }
 
@@ -1987,7 +2067,7 @@ div[style*="position: absolute"][style*="animation"] {
 
     /* CTA Final */
     .desarrollo-cta-final {
-        background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+        background: linear-gradient(135deg, #2c5282 0%, #1e3a5f 100%);
         border-radius: 20px;
         padding: 50px 40px;
         text-align: center;
@@ -2004,7 +2084,7 @@ div[style*="position: absolute"][style*="animation"] {
     .desarrollo-cta-final p {
         font-size: 1.1rem;
         margin-bottom: 30px;
-        opacity: 0.75;
+        opacity: 0.95;
     }
 
     .cta-buttons {
@@ -2026,7 +2106,7 @@ div[style*="position: absolute"][style*="animation"] {
 
     .cta-buttons .btn-primary {
         background: white;
-        color: #4A90E2;
+        color: #2c5282;
     }
 
     .cta-buttons .btn-primary:hover {
@@ -2103,22 +2183,22 @@ div[style*="position: absolute"][style*="animation"] {
     <div style="position: absolute; top: 10%; left: 10%; z-index: 999; animation: flotar1 12s infinite;">
         <div style="width: 100px; height: 100px; background: white; border: 4px solid white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: flex; flex-direction: column; padding: 10px;">
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; flex: 1;">
-                <div style="background: #667eea; border-radius: 2px;"></div>
-                <div style="background: #667eea; border-radius: 2px;"></div>
-                <div style="background: #667eea; border-radius: 2px;"></div>
-                <div style="background: #667eea; border-radius: 2px;"></div>
-                <div style="background: #667eea; border-radius: 2px;"></div>
-                <div style="background: #667eea; border-radius: 2px;"></div>
-                <div style="background: #667eea; border-radius: 2px;"></div>
-                <div style="background: #667eea; border-radius: 2px;"></div>
-                <div style="background: #667eea; border-radius: 2px;"></div>
+                <div style="background: #4c51bf; border-radius: 2px;"></div>
+                <div style="background: #4c51bf; border-radius: 2px;"></div>
+                <div style="background: #4c51bf; border-radius: 2px;"></div>
+                <div style="background: #4c51bf; border-radius: 2px;"></div>
+                <div style="background: #4c51bf; border-radius: 2px;"></div>
+                <div style="background: #4c51bf; border-radius: 2px;"></div>
+                <div style="background: #4c51bf; border-radius: 2px;"></div>
+                <div style="background: #4c51bf; border-radius: 2px;"></div>
+                <div style="background: #4c51bf; border-radius: 2px;"></div>
             </div>
             <div style="height: 20px; background: #764ba2; margin-top: 8px; border-radius: 3px;"></div>
         </div>
     </div>
 
     <div style="position: absolute; top: 60%; right: 15%; z-index: 999; animation: flotar2 15s infinite;">
-        <div style="width: 90px; height: 90px; position: relative;">
+        <div style="width: 90px; height: 90px; position: relative; z-index: 1;">
             <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 45px solid transparent; border-right: 45px solid transparent; border-bottom: 35px solid white; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));"></div>
             <div style="position: absolute; top: 25px; left: 0; width: 90px; height: 65px; background: white; border: 3px solid white; border-radius: 5px; box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
                 <div style="position: absolute; top: 10px; left: 10px; width: 20px; height: 20px; background: #f093fb; border-radius: 2px;"></div>
@@ -2167,7 +2247,7 @@ div[style*="position: absolute"][style*="animation"] {
 }
 
 html {
-    font-size: 12px; /* Base para rem */
+    font-size: 16px; /* Base para rem */
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 }
@@ -2182,7 +2262,7 @@ body {
 
 /* Banner principal - SIEMPRE arriba */
 header, .banner, .hero, section:first-of-type {
-    position: relative;
+    position: relative; z-index: 1;
     width: 100%;
     min-height: 60vh;
     padding: 2rem 1rem;
@@ -2302,7 +2382,7 @@ p, li {
     input, textarea, select {
         width: 100%;
         min-height: 48px;
-        font-size: 12px; /* Previene zoom en iPhone */
+        font-size: 16px; /* Previene zoom en iPhone */
         padding: 0.75rem;
     }
 }
@@ -2354,7 +2434,7 @@ body, html {
 /* Prevenir scroll horizontal */
 body {
     overflow-x: hidden;
-    position: relative;
+    position: relative; z-index: 1;
 }
 
 /* Touch gestures */
@@ -2371,18 +2451,18 @@ a, button, .clickable {
             <div style="position: absolute; top: 20%; left: 15%; animation: float-spin-1 15s infinite ease-in-out; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));">
                 <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="20" y="15" width="40" height="55" fill="white" opacity="0.95" stroke="white" stroke-width="3" rx="2"/>
-                    <rect x="26" y="22" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="38" y="22" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="50" y="22" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="26" y="32" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="38" y="32" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="50" y="32" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="26" y="42" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="38" y="42" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="50" y="42" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="26" y="52" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="38" y="52" width="8" height="7" fill="#667eea" opacity="0.8"/>
-                    <rect x="50" y="52" width="8" height="7" fill="#667eea" opacity="0.8"/>
+                    <rect x="26" y="22" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="38" y="22" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="50" y="22" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="26" y="32" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="38" y="32" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="50" y="32" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="26" y="42" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="38" y="42" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="50" y="42" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="26" y="52" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="38" y="52" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
+                    <rect x="50" y="52" width="8" height="7" fill="#4c51bf" opacity="0.8"/>
                     <rect x="32" y="60" width="16" height="10" fill="#764ba2" opacity="0.9"/>
                 </svg>
             </div>
@@ -2433,7 +2513,7 @@ a, button, .clickable {
             @keyframes float-spin-1 {
                 0% { 
                     transform: translateY(0px) rotate(0deg) scale(1);
-                    opacity: 0.7;
+                    opacity: 0.9;
                 }
                 25% { 
                     transform: translateY(-30px) rotate(90deg) scale(1.15);
@@ -2441,7 +2521,7 @@ a, button, .clickable {
                 }
                 50% { 
                     transform: translateY(-10px) rotate(180deg) scale(1.05);
-                    opacity: 0.75;
+                    opacity: 0.95;
                 }
                 75% { 
                     transform: translateY(-30px) rotate(270deg) scale(1.15);
@@ -2449,14 +2529,14 @@ a, button, .clickable {
                 }
                 100% { 
                     transform: translateY(0px) rotate(360deg) scale(1);
-                    opacity: 0.7;
+                    opacity: 0.9;
                 }
             }
 
             @keyframes float-spin-2 {
                 0% { 
                     transform: translateY(0px) rotate(0deg) scale(1);
-                    opacity: 0.7;
+                    opacity: 0.9;
                 }
                 30% { 
                     transform: translateY(-35px) rotate(-108deg) scale(1.18);
@@ -2464,11 +2544,11 @@ a, button, .clickable {
                 }
                 60% { 
                     transform: translateY(-15px) rotate(-216deg) scale(1.08);
-                    opacity: 0.75;
+                    opacity: 0.95;
                 }
                 100% { 
                     transform: translateY(0px) rotate(-360deg) scale(1);
-                    opacity: 0.7;
+                    opacity: 0.9;
                 }
             }
 
@@ -2483,7 +2563,7 @@ a, button, .clickable {
                 }
                 66% { 
                     transform: translateY(-8px) rotate(240deg) scale(1.02);
-                    opacity: 0.72;
+                    opacity: 0.92;
                 }
                 100% { 
                     transform: translateY(0px) rotate(360deg) scale(0.95);
@@ -2502,7 +2582,7 @@ a, button, .clickable {
                 }
                 56% { 
                     transform: translateY(-12px) rotate(-200deg) scale(1.06);
-                    opacity: 0.74;
+                    opacity: 0.94;
                 }
                 100% { 
                     transform: translateY(0px) rotate(-360deg) scale(1);
@@ -2528,7 +2608,7 @@ a, button, .clickable {
 }
 
 html {
-    font-size: 12px; /* Base para rem */
+    font-size: 16px; /* Base para rem */
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 }
@@ -2543,7 +2623,7 @@ body {
 
 /* Banner principal - SIEMPRE arriba */
 header, .banner, .hero, section:first-of-type {
-    position: relative;
+    position: relative; z-index: 1;
     width: 100%;
     min-height: 60vh;
     padding: 2rem 1rem;
@@ -2663,7 +2743,7 @@ p, li {
     input, textarea, select {
         width: 100%;
         min-height: 48px;
-        font-size: 12px; /* Previene zoom en iPhone */
+        font-size: 16px; /* Previene zoom en iPhone */
         padding: 0.75rem;
     }
 }
@@ -2715,7 +2795,7 @@ body, html {
 /* Prevenir scroll horizontal */
 body {
     overflow-x: hidden;
-    position: relative;
+    position: relative; z-index: 1;
 }
 
 /* Touch gestures */
@@ -2970,7 +3050,7 @@ a, button, .clickable {
 }
 
 html {
-    font-size: 12px; /* Base para rem */
+    font-size: 16px; /* Base para rem */
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 }
@@ -2985,7 +3065,7 @@ body {
 
 /* Banner principal - SIEMPRE arriba */
 header, .banner, .hero, section:first-of-type {
-    position: relative;
+    position: relative; z-index: 1;
     width: 100%;
     min-height: 60vh;
     padding: 2rem 1rem;
@@ -3105,7 +3185,7 @@ p, li {
     input, textarea, select {
         width: 100%;
         min-height: 48px;
-        font-size: 12px; /* Previene zoom en iPhone */
+        font-size: 16px; /* Previene zoom en iPhone */
         padding: 0.75rem;
     }
 }
@@ -3157,7 +3237,7 @@ body, html {
 /* Prevenir scroll horizontal */
 body {
     overflow-x: hidden;
-    position: relative;
+    position: relative; z-index: 1;
 }
 
 /* Touch gestures */
@@ -3176,9 +3256,9 @@ a, button, .clickable {
             <svg viewBox="0 0 1200 600" preserveAspectRatio="none">
                 <defs>
                     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#FFC107;stop-opacity:0.6" />
-                        <stop offset="50%" style="stop-color:#f6e27a;stop-opacity:0.4" />
-                        <stop offset="100%" style="stop-color:#FFC107;stop-opacity:0.6" />
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.6" />
+                        <stop offset="50%" style="stop-color:#FDB813;stop-opacity:0.4" />
+                        <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.6" />
                     </linearGradient>
                     <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" style="stop-color:#9b7db7;stop-opacity:0.5" />
@@ -3186,8 +3266,8 @@ a, button, .clickable {
                         <stop offset="100%" style="stop-color:#9b7db7;stop-opacity:0.5" />
                     </linearGradient>
                     <radialGradient id="radialGold" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" style="stop-color:#f6e27a;stop-opacity:0.6" />
-                        <stop offset="100%" style="stop-color:#FFC107;stop-opacity:0.2" />
+                        <stop offset="0%" style="stop-color:#FDB813;stop-opacity:0.6" />
+                        <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.2" />
                     </radialGradient>
                 </defs>
                 <path class="wave" d="M0,200 Q300,100 600,200 T1200,200 L1200,0 L0,0 Z" fill="url(#goldGrad)" />
@@ -3198,7 +3278,7 @@ a, button, .clickable {
 
         <div class="badge-container" onclick="openLicenseModal()">
             <div class="ana-badge">
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; padding: 20px; margin: 0 auto 10px; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                <div style="background: linear-gradient(135deg, #4c51bf 0%, #764ba2 100%); border-radius: 50%; padding: 20px; margin: 0 auto 10px; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
                     <span style="font-size: 2.5rem; color: white;">🏆</span>
                 </div>
                 <h3>Certificado ANA</h3>
@@ -3217,29 +3297,6 @@ a, button, .clickable {
             </div>
         </div>
     </section>
-
-    <!-- Banner Certificaciones RA/RNA -->
-    <section style="background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%); padding: 40px 20px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
-                <div style="background: white; padding: 20px 40px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="font-size: 1.8rem; color: #2d3748; margin: 0; font-weight: 700;">
-                        🏆 RA <span style="color: #FFC107;">Registro de Avaluadores</span>
-                    </h3>
-                    <p style="margin: 10px 0 0; color: #718096; font-size: 0.95rem;">Lonja de Propiedad Raíz de Medellín y Antioquia</p>
-                </div>
-
-                <div style="background: white; padding: 20px 40px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="font-size: 1.8rem; color: #2d3748; margin: 0; font-weight: 700;">
-                        🏅 RNA <span style="color: #4A90E2;">Registro Nacional</span>
-                    </h3>
-                    <p style="margin: 10px 0 0; color: #718096; font-size: 0.95rem;">Certificación Nacional de Avaluadores</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
 
 
     <!-- ==================== SECCIÓN DESARROLLO INMOBILIARIO ==================== -->
@@ -3384,41 +3441,54 @@ a, button, .clickable {
                 </div>
             </div>
 
-            <!-- Certificaciones -->
-            <div class="certificaciones-desarrollo">
-                <h3 class="subsection-title">🏆 Certificaciones Profesionales</h3>
-                <div class="certificaciones-grid">
-                    <div class="cert-card">
-                        <div class="cert-icon">📜</div>
-                        <h4>RA - Registro Nacional de Avaluadores</h4>
-                        <p>Todos nuestros avaluadores cuentan con <strong>Registro Nacional de Avaluadores (RA)</strong>, garantizando avalúos oficiales y certificados ante cualquier entidad.</p>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon">🎖️</div>
-                        <h4>RNA - Registro Adicional</h4>
-                        <p>Miembros del equipo con <strong>Registro Nacional Adicional (RNA)</strong>, ampliando nuestra capacidad técnica y legal para avalúos especializados.</p>
-                    </div>
-                    <div class="cert-card destacado">
-                        <div class="cert-icon">⭐</div>
-                        <h4>ANA AVAL-70072122</h4>
-                        <p><strong>Certificación ANA vigente</strong> - Asociación Nacional de Avaluadores. Garantía de profesionalismo y ética en todos nuestros servicios.</p>
-                    </div>
+            
+    <!-- Certificaciones Destacadas -->
+    <section id="certificaciones" style="padding: 80px 0; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; color: #FFD700; margin-bottom: 20px; font-weight: 700;">
+                    🏆 Certificaciones Profesionales
+                </h2>
+                <p style="font-size: 1.2rem; color: #ffffff; max-width: 800px; margin: 0 auto;">
+                    Acreditación oficial como Avaluador Profesional en Colombia
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 900px; margin: 0 auto;">
+                <!-- RA - Registro de Avaluadores -->
+                <div style="background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 15px 40px rgba(255,215,0,0.3); transform: translateY(0); transition: transform 0.3s ease;">
+                    <div style="font-size: 4rem; margin-bottom: 20px;">🎖️</div>
+                    <h3 style="color: #1e3a5f; font-size: 1.8rem; margin-bottom: 15px; font-weight: 700;">RA</h3>
+                    <p style="color: #2d3748; font-size: 1.1rem; font-weight: 600; margin-bottom: 10px;">
+                        Registro de Avaluadores
+                    </p>
+                    <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6;">
+                        Certificación oficial para avalúos catastrales y urbanos en Colombia
+                    </p>
+                </div>
+
+                <!-- RNA - Registro Nacional de Avaluadores -->
+                <div style="background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 15px 40px rgba(255,215,0,0.3); transform: translateY(0); transition: transform 0.3s ease;">
+                    <div style="font-size: 4rem; margin-bottom: 20px;">🏅</div>
+                    <h3 style="color: #1e3a5f; font-size: 1.8rem; margin-bottom: 15px; font-weight: 700;">RNA</h3>
+                    <p style="color: #2d3748; font-size: 1.1rem; font-weight: 600; margin-bottom: 10px;">
+                        Registro Nacional de Avaluadores
+                    </p>
+                    <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6;">
+                        Habilitación para avalúos comerciales, estudios de prefactibilidad y factibilidad y peritajes técnicos especializados
+                    </p>
                 </div>
             </div>
 
-            <!-- Call to Action Final -->
-            <div class="desarrollo-cta-final">
-                <h3>¿Listo para desarrollar su proyecto inmobiliario?</h3>
-                <p>Contáctenos para una consulta inicial sin compromiso</p>
-                <div class="cta-buttons">
-                    <a href="#contacto" class="btn btn-primary">Solicitar Consulta</a>
-                    <a href="https://wa.me/573102345678?text=Hola%2C%20estoy%20interesado%20en%20desarrollo%20inmobiliario" class="btn btn-whatsapp" target="_blank">
-                        💬 WhatsApp Directo
-                    </a>
-                </div>
+            <!-- Nota adicional -->
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: #FDB813; font-size: 1rem; font-style: italic;">
+                    ✓ Certificaciones vigentes y actualizadas conforme a normativa colombiana
+                </p>
             </div>
         </div>
     </section>
+
 
 
 
@@ -3501,33 +3571,60 @@ a, button, .clickable {
     </section>
 
     <!-- Sección Equipo/Agentes -->
-    <section id="equipo" class="team-section">
-        <div class="container">
-            <h2 class="section-title">Nuestro Equipo de Agentes IA</h2>
-            <div class="team-grid">
-                <div class="agent-card">
-                    <div class="agent-icon">🤖</div>
-                    <h3>Agente de Análisis</h3>
-                    <p>Especializado en análisis de mercado y comparables. Procesa datos de propiedades similares para establecer valores de referencia precisos.</p>
+    
+    <!-- Equipo Multidisciplinario -->
+    <section id="equipo" style="padding: 80px 0; background: #f5f7fa;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; color: #1e3a5f; margin-bottom: 20px; font-weight: 700;">
+                    👥 Equipo Multidisciplinario
+                </h2>
+                <p style="font-size: 1.2rem; color: #2d3748; max-width: 800px; margin: 0 auto;">
+                    Red de profesionales especializados para proyectos integrales
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <!-- Arquitectos -->
+                <div style="background: white; border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 4px solid #FFD700;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🏛️</div>
+                    <h3 style="color: #1e3a5f; font-size: 1.3rem; margin-bottom: 10px; font-weight: 600;">Arquitectos</h3>
+                    <p style="color: #4a5568; font-size: 0.95rem;">Diseño y planificación urbana</p>
                 </div>
-                <div class="agent-card">
-                    <div class="agent-icon">💼</div>
-                    <h3>Agente de Valoración</h3>
-                    <p>Aplica metodologías de valoración avaladas por normas técnicas. Genera informes detallados con justificación de valores.</p>
+
+                <!-- Ingenieros -->
+                <div style="background: white; border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 4px solid #FFD700;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">⚙️</div>
+                    <h3 style="color: #1e3a5f; font-size: 1.3rem; margin-bottom: 10px; font-weight: 600;">Ingenieros</h3>
+                    <p style="color: #4a5568; font-size: 0.95rem;">Civiles, estructurales y ambientales</p>
                 </div>
-                <div class="agent-card">
-                    <div class="agent-icon">📝</div>
-                    <h3>Agente de Documentación</h3>
-                    <p>Gestiona la generación de informes técnicos, certificados y documentación legal requerida para cada tipo de avalúo.</p>
+
+                <!-- Abogados -->
+                <div style="background: white; border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 4px solid #FFD700;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">⚖️</div>
+                    <h3 style="color: #1e3a5f; font-size: 1.3rem; margin-bottom: 10px; font-weight: 600;">Abogados</h3>
+                    <p style="color: #4a5568; font-size: 0.95rem;">Derecho inmobiliario y urbano</p>
                 </div>
-                <div class="agent-card">
-                    <div class="agent-icon">🔍</div>
-                    <h3>Agente de Verificación</h3>
-                    <p>Realiza control de calidad, verifica cumplimiento normativo y valida la coherencia de todos los datos del avalúo.</p>
+
+                <!-- Economistas -->
+                <div style="background: white; border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 4px solid #FFD700;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">📊</div>
+                    <h3 style="color: #1e3a5f; font-size: 1.3rem; margin-bottom: 10px; font-weight: 600;">Economistas</h3>
+                    <p style="color: #4a5568; font-size: 0.95rem;">Análisis financiero y de mercado</p>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px; padding: 30px; background: linear-gradient(135deg, #2c5282 0%, #1e3a5f 100%); border-radius: 15px;">
+                <p style="color: #FFD700; font-size: 1.2rem; font-weight: 600; margin-bottom: 10px;">
+                    💼 Soluciones Integrales
+                </p>
+                <p style="color: #ffffff; font-size: 1rem; max-width: 700px; margin: 0 auto;">
+                    Coordinación profesional para proyectos complejos que requieren múltiples expertises
+                </p>
             </div>
         </div>
     </section>
+
 
     <section id="servicios" class="services">
         <div class="container">
@@ -3540,7 +3637,7 @@ a, button, .clickable {
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🏢</div>
-                    <h3>Avalúos Comerciales</h3>
+                    <h3>Avalúos Comerciales y Estudios de Viabilidad</h3>
                     <p>Locales comerciales, oficinas y edificios empresariales.</p>
                 </div>
                 <div class="service-card">
@@ -3686,7 +3783,7 @@ a, button, .clickable {
     
 
         <!-- Nuestro Trabajo Section -->
-        <section id="portfolio" style="position: relative; padding: 80px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <section id="portfolio" style="position: relative; z-index: 1; padding: 80px 20px; background: linear-gradient(135deg, #4c51bf 0%, #764ba2 100%);">
             <div style="max-width: 1200px; margin: 0 auto;">
                 <div style="text-align: center; margin-bottom: 60px;">
                     <h2 style="font-size: 42px; color: white; margin-bottom: 20px; font-weight: 700;">
@@ -3700,9 +3797,9 @@ a, button, .clickable {
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px;">
                     <!-- Inmuebles Residenciales -->
                     <div class="portfolio-card" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                        <div style="height: 220px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <div style="height: 220px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; overflow: hidden;">
                             <div style="position: absolute; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600') center/cover;"></div>
-                            <div style="position: relative; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
+                            <div style="position: relative; z-index: 1; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
                                 <span style="font-size: 60px;">🏠</span>
                             </div>
                         </div>
@@ -3714,9 +3811,9 @@ a, button, .clickable {
 
                     <!-- Terrenos Rurales -->
                     <div class="portfolio-card" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                        <div style="height: 220px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <div style="height: 220px; background: linear-gradient(135deg, #fa709a 0%, #FFD700 100%); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; overflow: hidden;">
                             <div style="position: absolute; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600') center/cover;"></div>
-                            <div style="position: relative; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
+                            <div style="position: relative; z-index: 1; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
                                 <span style="font-size: 60px;">🌾</span>
                             </div>
                         </div>
@@ -3728,9 +3825,9 @@ a, button, .clickable {
 
                     <!-- Comercial e Industrial -->
                     <div class="portfolio-card" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                        <div style="height: 220px; background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <div style="height: 220px; background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; overflow: hidden;">
                             <div style="position: absolute; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600') center/cover;"></div>
-                            <div style="position: relative; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
+                            <div style="position: relative; z-index: 1; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
                                 <span style="font-size: 60px;">🏢</span>
                             </div>
                         </div>
@@ -3742,9 +3839,9 @@ a, button, .clickable {
 
                     <!-- Avalúos Legales -->
                     <div class="portfolio-card" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                        <div style="height: 220px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <div style="height: 220px; background: linear-gradient(135deg, #4c51bf 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; overflow: hidden;">
                             <div style="position: absolute; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600') center/cover;"></div>
-                            <div style="position: relative; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
+                            <div style="position: relative; z-index: 1; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
                                 <span style="font-size: 60px;">⚖️</span>
                             </div>
                         </div>
@@ -3756,9 +3853,9 @@ a, button, .clickable {
 
                     <!-- Propiedades Especiales -->
                     <div class="portfolio-card" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                        <div style="height: 220px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <div style="height: 220px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; overflow: hidden;">
                             <div style="position: absolute; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600') center/cover;"></div>
-                            <div style="position: relative; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
+                            <div style="position: relative; z-index: 1; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
                                 <span style="font-size: 60px;">🏛️</span>
                             </div>
                         </div>
@@ -3770,9 +3867,9 @@ a, button, .clickable {
 
                     <!-- Proyectos en Construcción -->
                     <div class="portfolio-card" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-                        <div style="height: 220px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <div style="height: 220px; background: linear-gradient(135deg, #fa709a 0%, #FFD700 100%); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; overflow: hidden;">
                             <div style="position: absolute; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600') center/cover;"></div>
-                            <div style="position: relative; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
+                            <div style="position: relative; z-index: 1; z-index: 1; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
                                 <span style="font-size: 60px;">🏗️</span>
                             </div>
                         </div>
@@ -3802,7 +3899,7 @@ a, button, .clickable {
 }
 
 html {
-    font-size: 12px; /* Base para rem */
+    font-size: 16px; /* Base para rem */
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 }
@@ -3817,7 +3914,7 @@ body {
 
 /* Banner principal - SIEMPRE arriba */
 header, .banner, .hero, section:first-of-type {
-    position: relative;
+    position: relative; z-index: 1;
     width: 100%;
     min-height: 60vh;
     padding: 2rem 1rem;
@@ -3937,7 +4034,7 @@ p, li {
     input, textarea, select {
         width: 100%;
         min-height: 48px;
-        font-size: 12px; /* Previene zoom en iPhone */
+        font-size: 16px; /* Previene zoom en iPhone */
         padding: 0.75rem;
     }
 }
@@ -3989,7 +4086,7 @@ body, html {
 /* Prevenir scroll horizontal */
 body {
     overflow-x: hidden;
-    position: relative;
+    position: relative; z-index: 1;
 }
 
 /* Touch gestures */
@@ -4005,8 +4102,8 @@ a, button, .clickable {
             <div style="max-width: 1200px; margin: 0 auto;">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
                     <!-- Imagen -->
-                    <div style="position: relative;">
-                        <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); position: relative;">
+                    <div style="position: relative; z-index: 1;">
+                        <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); position: relative; z-index: 1;">
                             <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800" 
                                  style="width: 100%; height: 500px; object-fit: cover;" 
                                  alt="Proyecto de construcción">
@@ -4018,65 +4115,70 @@ a, button, .clickable {
 
                     <!-- Contenido -->
                     <div>
-                        <h2 style="font-size: 42px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; font-weight: 700; line-height: 1.2;">
+                        <h2 style="font-size: 42px; background: linear-gradient(135deg, #4c51bf 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; font-weight: 700; line-height: 1.2;">
                             Experiencia que Respalda Cada Avalúo
                         </h2>
 
                         <p style="font-size: 18px; color: #4a5568; line-height: 1.8; margin-bottom: 30px;">
-                            Con más de <strong style="color: #667eea;">40 años</strong> en el sector de la construcción y 
+                            Con más de <strong style="color: #4c51bf;">40 años</strong> en el sector de la construcción y 
                             <strong style="color: #764ba2;">25 años como avaluador certificado</strong>, Javier Restrepo Tabares ofrece el más alto 
                             nivel de precisión y profesionalismo en cada evaluación.
                         </p>
 
-                        <p style="font-size: 12px; color: #718096; line-height: 1.8; margin-bottom: 35px;">
+                        <p style="font-size: 16px; color: #718096; line-height: 1.8; margin-bottom: 35px;">
                             Registrado oficialmente en el <strong>Autorregulador Nacional de Avaluadores (ANA)</strong> con el código 
                             <span style="display: inline-block; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 4px 12px; border-radius: 6px; font-weight: 600;">AVAL-70072122</span>, 
                             garantizamos avalúos técnicos respaldados por formación académica especializada y amplia experiencia de campo.
                         </p>
 
-                        <!-- Certificaciones -->
-                        <div style="background: linear-gradient(135deg, #f6f8fb 0%, #e9ecef 100%); border-left: 5px solid #667eea; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
-                            <h3 style="font-size: 20px; color: #2d3748; margin-bottom: 20px; display: flex; align-items: center;">
-                                <span style="margin-right: 10px;">🎓</span>
-                                Certificaciones Activas:
-                            </h3>
-                            <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li style="padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center;">
-                                    <span style="color: #48bb78; margin-right: 10px; font-size: 20px;">✓</span>
-                                    <span style="color: #4a5568; font-size: 12px;">Registro Abierto de Avaluadores (RAA)</span>
-                                </li>
-                                <li style="padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center;">
-                                    <span style="color: #48bb78; margin-right: 10px; font-size: 20px;">✓</span>
-                                    <span style="color: #4a5568; font-size: 12px;">Certificación ISO 17024 - Inmuebles Urbanos</span>
-                                </li>
-                                <li style="padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center;">
-                                    <span style="color: #48bb78; margin-right: 10px; font-size: 20px;">✓</span>
-                                    <span style="color: #4a5568; font-size: 12px;">Técnico Laboral Avaluador - Colegiatura Inmobiliaria</span>
-                                </li>
-                                <li style="padding: 10px 0; display: flex; align-items: center;">
-                                    <span style="color: #48bb78; margin-right: 10px; font-size: 20px;">✓</span>
-                                    <span style="color: #4a5568; font-size: 12px;">Sin sanciones disciplinarias</span>
-                                </li>
-                            </ul>
-                        </div>
+                        
+    <!-- Certificaciones Destacadas -->
+    <section id="certificaciones" style="padding: 80px 0; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; color: #FFD700; margin-bottom: 20px; font-weight: 700;">
+                    🏆 Certificaciones Profesionales
+                </h2>
+                <p style="font-size: 1.2rem; color: #ffffff; max-width: 800px; margin: 0 auto;">
+                    Acreditación oficial como Avaluador Profesional en Colombia
+                </p>
+            </div>
 
-                        <!-- Botones de Documentos -->
-                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                            <a href="assets/Licencia_AVAL-70072122.pdf" target="_blank" 
-                               style="display: inline-flex; align-items: center; padding: 14px 28px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 12px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
-                                <span style="margin-right: 10px; font-size: 20px;">📄</span>
-                                Ver Certificado RAA
-                            </a>
-                            <a href="assets/Tarjeta_AVAL-70072122.pdf" target="_blank" 
-                               style="display: inline-flex; align-items: center; padding: 14px 28px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 12px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);">
-                                <span style="margin-right: 10px; font-size: 20px;">🎫</span>
-                                Ver Tarjeta Profesional
-                            </a>
-                        </div>
-                    </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 900px; margin: 0 auto;">
+                <!-- RA - Registro de Avaluadores -->
+                <div style="background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 15px 40px rgba(255,215,0,0.3); transform: translateY(0); transition: transform 0.3s ease;">
+                    <div style="font-size: 4rem; margin-bottom: 20px;">🎖️</div>
+                    <h3 style="color: #1e3a5f; font-size: 1.8rem; margin-bottom: 15px; font-weight: 700;">RA</h3>
+                    <p style="color: #2d3748; font-size: 1.1rem; font-weight: 600; margin-bottom: 10px;">
+                        Registro de Avaluadores
+                    </p>
+                    <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6;">
+                        Certificación oficial para avalúos catastrales y urbanos en Colombia
+                    </p>
+                </div>
+
+                <!-- RNA - Registro Nacional de Avaluadores -->
+                <div style="background: linear-gradient(135deg, #FFD700 0%, #FDB813 100%); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 15px 40px rgba(255,215,0,0.3); transform: translateY(0); transition: transform 0.3s ease;">
+                    <div style="font-size: 4rem; margin-bottom: 20px;">🏅</div>
+                    <h3 style="color: #1e3a5f; font-size: 1.8rem; margin-bottom: 15px; font-weight: 700;">RNA</h3>
+                    <p style="color: #2d3748; font-size: 1.1rem; font-weight: 600; margin-bottom: 10px;">
+                        Registro Nacional de Avaluadores
+                    </p>
+                    <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6;">
+                        Habilitación para avalúos comerciales, estudios de prefactibilidad y factibilidad y peritajes técnicos especializados
+                    </p>
                 </div>
             </div>
-        </section>
+
+            <!-- Nota adicional -->
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: #FDB813; font-size: 1rem; font-style: italic;">
+                    ✓ Certificaciones vigentes y actualizadas conforme a normativa colombiana
+                </p>
+            </div>
+        </div>
+    </section>
+
 
         <!-- Responsive Styles -->
         <style>
@@ -4098,7 +4200,7 @@ a, button, .clickable {
 }
 
 html {
-    font-size: 12px; /* Base para rem */
+    font-size: 16px; /* Base para rem */
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 }
@@ -4113,7 +4215,7 @@ body {
 
 /* Banner principal - SIEMPRE arriba */
 header, .banner, .hero, section:first-of-type {
-    position: relative;
+    position: relative; z-index: 1;
     width: 100%;
     min-height: 60vh;
     padding: 2rem 1rem;
@@ -4233,7 +4335,7 @@ p, li {
     input, textarea, select {
         width: 100%;
         min-height: 48px;
-        font-size: 12px; /* Previene zoom en iPhone */
+        font-size: 16px; /* Previene zoom en iPhone */
         padding: 0.75rem;
     }
 }
@@ -4285,7 +4387,7 @@ body, html {
 /* Prevenir scroll horizontal */
 body {
     overflow-x: hidden;
-    position: relative;
+    position: relative; z-index: 1;
 }
 
 /* Touch gestures */
@@ -4330,105 +4432,7 @@ a, button, .clickable {
             <p>&copy; 2025 Javier Restrepo - Avalúos Certificados. Todos los derechos reservados.</p>
             <p style="margin-top: 0.5rem; font-size: 0.9rem;">Certificación ANA AVAL-70072122 | Avaluador Profesional</p>
         </div>
-    
-    <!-- Nueva Sección: Desarrollo Inmobiliario -->
-    <section id="desarrollo-inmobiliario" style="padding: 80px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align: center; font-size: 2.5rem; color: white; margin-bottom: 20px;">Desarrollo Inmobiliario</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto 60px;">
-                Servicios especializados para proyectos inmobiliarios desde la concepción hasta la ejecución
-            </p>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <!-- Prefactibilidad -->
-                <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s;">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <span style="font-size: 30px;">📊</span>
-                    </div>
-                    <h3 style="font-size: 1.5rem; color: #2d3748; margin-bottom: 15px;">Estudios de Prefactibilidad</h3>
-                    <ul style="color: #718096; line-height: 1.8; list-style: none; padding-left: 0;">
-                        <li style="margin-bottom: 10px;">✓ Análisis de viabilidad económica inicial</li>
-                        <li style="margin-bottom: 10px;">✓ Estimación preliminar de costos</li>
-                        <li style="margin-bottom: 10px;">✓ Identificación de riesgos tempranos</li>
-                        <li style="margin-bottom: 10px;">✓ Evaluación de alternativas de proyecto</li>
-                    </ul>
-                </div>
-
-                <!-- Factibilidad -->
-                <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s;">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <span style="font-size: 30px;">📈</span>
-                    </div>
-                    <h3 style="font-size: 1.5rem; color: #2d3748; margin-bottom: 15px;">Estudios de Factibilidad</h3>
-                    <ul style="color: #718096; line-height: 1.8; list-style: none; padding-left: 0;">
-                        <li style="margin-bottom: 10px;">✓ Análisis financiero detallado</li>
-                        <li style="margin-bottom: 10px;">✓ Estudios de mercado profundos</li>
-                        <li style="margin-bottom: 10px;">✓ Evaluación técnica completa</li>
-                        <li style="margin-bottom: 10px;">✓ Plan de ejecución y cronograma</li>
-                    </ul>
-                </div>
-
-                <!-- Gerencia -->
-                <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s;">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <span style="font-size: 30px;">🏗️</span>
-                    </div>
-                    <h3 style="font-size: 1.5rem; color: #2d3748; margin-bottom: 15px;">Gerencia de Proyectos</h3>
-                    <ul style="color: #718096; line-height: 1.8; list-style: none; padding-left: 0;">
-                        <li style="margin-bottom: 10px;">✓ Dirección integral del proyecto</li>
-                        <li style="margin-bottom: 10px;">✓ Control de costos y presupuesto</li>
-                        <li style="margin-bottom: 10px;">✓ Supervisión de calidad</li>
-                        <li style="margin-bottom: 10px;">✓ Coordinación de stakeholders</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección: Equipo Multidisciplinario -->
-    <section id="equipo" style="padding: 80px 20px; background: #f5f7fa;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align: center; font-size: 2.5rem; color: #2d3748; margin-bottom: 20px;">Equipo Multidisciplinario</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #718096; max-width: 800px; margin: 0 auto 60px;">
-                Profesionales expertos en cada área del avalúo y la ingeniería
-            </p>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 35px;">👨‍💼</span>
-                    </div>
-                    <h3 style="font-size: 1.3rem; color: #2d3748; margin-bottom: 10px;">Avaluadores Certificados</h3>
-                    <p style="color: #718096; font-size: 0.95rem;">RA y RNA - Lonja de Propiedad Raíz de Medellín y Antioquia</p>
-                </div>
-
-                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 35px;">👷</span>
-                    </div>
-                    <h3 style="font-size: 1.3rem; color: #2d3748; margin-bottom: 10px;">Ingenieros Civiles</h3>
-                    <p style="color: #718096; font-size: 0.95rem;">Especialistas en estructuras, construcción y desarrollo</p>
-                </div>
-
-                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 35px;">🏛️</span>
-                    </div>
-                    <h3 style="font-size: 1.3rem; color: #2d3748; margin-bottom: 10px;">Arquitectos</h3>
-                    <p style="color: #718096; font-size: 0.95rem;">Expertos en diseño, planificación urbana y normativa</p>
-                </div>
-
-                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 35px;">💼</span>
-                    </div>
-                    <h3 style="font-size: 1.3rem; color: #2d3748; margin-bottom: 10px;">Asesores Financieros</h3>
-                    <p style="color: #718096; font-size: 0.95rem;">Análisis de viabilidad y estructuración de proyectos</p>
-                </div>
-            </div>
-        </div>
-    </section>
-</footer>
+    </footer>
 
     <!-- Modal de Licencia -->
     <div id="licenseModal" class="modal" onclick="closeLicenseModal(event)">
