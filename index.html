@@ -1566,7 +1566,518 @@ div[style*="position: absolute"][style*="animation"] {
     z-index: 1000 !important;
 }
 
-    </style>
+    
+
+
+    /* Badge Certificación ANA - VERSIÓN MEJORADA */
+    .certificado-ana-badge {
+        position: fixed;
+        top: 85px;
+        left: 12px;
+        background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 100;
+        max-width: 120px;
+        text-align: center;
+        border: 2px solid #FFD700;
+        transition: all 0.3s ease;
+        animation: gentle-pulse 3s ease-in-out infinite;
+    }
+
+    .certificado-ana-badge:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(255, 215, 0, 0.4);
+    }
+
+    .certificado-ana-badge .badge-icon {
+        font-size: 2.5rem;
+        margin-bottom: 6px;
+    }
+
+    .certificado-ana-badge .badge-title {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #4A90E2;
+        margin: 4px 0;
+    }
+
+    .certificado-ana-badge .badge-subtitle {
+        font-size: 0.65rem;
+        color: #666;
+        margin: 2px 0;
+    }
+
+    .certificado-ana-badge .badge-code {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #FFD700;
+        margin: 4px 0;
+    }
+
+    .certificado-ana-badge .badge-link {
+        font-size: 0.6rem;
+        color: #4A90E2;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 4px;
+    }
+
+    @keyframes gentle-pulse {
+        0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        50% { box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5); }
+    }
+
+    @media (max-width: 768px) {
+        .certificado-ana-badge {
+            max-width: 95px;
+            top: 75px;
+            left: 8px;
+            padding: 8px;
+        }
+        .certificado-ana-badge .badge-icon {
+            font-size: 2rem;
+        }
+        .certificado-ana-badge .badge-title {
+            font-size: 0.65rem;
+        }
+        .certificado-ana-badge .badge-code {
+            font-size: 0.6rem;
+        }
+    }
+
+    @media (max-width: 375px) {
+        .certificado-ana-badge {
+            max-width: 85px;
+            top: 72px;
+            left: 5px;
+            padding: 6px;
+        }
+    }
+
+
+
+    /* ==================== DESARROLLO INMOBILIARIO SECTION ==================== */
+    .desarrollo-inmobiliario-section {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .desarrollo-intro {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 60px;
+    }
+
+    .desarrollo-description {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #2c3e50;
+    }
+
+    .subsection-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #2c3e50;
+        text-align: center;
+        margin: 60px 0 40px;
+        position: relative;
+    }
+
+    .subsection-title::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #4A90E2, #FFD700);
+        margin: 15px auto 0;
+        border-radius: 2px;
+    }
+
+    /* Equipo Multidisciplinario */
+    .equipo-multidisciplinario {
+        margin-bottom: 80px;
+    }
+
+    .profesionales-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .profesional-card {
+        background: white;
+        border-radius: 16px;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .profesional-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 24px rgba(74, 144, 226, 0.3);
+        border-color: #4A90E2;
+    }
+
+    .profesional-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .profesional-card h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+
+    .profesional-card p {
+        font-size: 0.9rem;
+        color: #7f8c8d;
+        line-height: 1.5;
+    }
+
+    /* Servicios de Factibilidad */
+    .factibilidad-services {
+        margin-bottom: 80px;
+    }
+
+    .factibilidad-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 40px;
+        margin: 40px 0 60px;
+    }
+
+    .factibilidad-card {
+        background: white;
+        border-radius: 20px;
+        padding: 35px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        border: 3px solid #e0e0e0;
+        transition: all 0.3s ease;
+    }
+
+    .factibilidad-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    .factibilidad-card.factibilidad {
+        border-color: #4A90E2;
+        background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+    }
+
+    .factibilidad-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .factibilidad-header h4 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin: 0;
+    }
+
+    .factibilidad-badge {
+        background: #ecf0f1;
+        color: #7f8c8d;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .factibilidad-badge.destacado {
+        background: linear-gradient(135deg, #4A90E2, #357ABD);
+        color: white;
+    }
+
+    .factibilidad-description {
+        font-size: 1.05rem;
+        color: #34495e;
+        margin-bottom: 25px;
+        line-height: 1.7;
+    }
+
+    .factibilidad-features {
+        list-style: none;
+        padding: 0;
+        margin: 25px 0;
+    }
+
+    .factibilidad-features li {
+        padding: 10px 0;
+        font-size: 0.95rem;
+        color: #555;
+        border-bottom: 1px solid #ecf0f1;
+    }
+
+    .factibilidad-features li:last-child {
+        border-bottom: none;
+    }
+
+    .factibilidad-cta {
+        margin-top: 30px;
+        text-align: center;
+        padding-top: 25px;
+        border-top: 2px dashed #e0e0e0;
+    }
+
+    .factibilidad-cta p {
+        font-size: 0.95rem;
+        color: #7f8c8d;
+        margin-bottom: 15px;
+    }
+
+    .btn-factibilidad {
+        display: inline-block;
+        padding: 12px 28px;
+        background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .btn-factibilidad:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .btn-factibilidad.destacado {
+        background: linear-gradient(135deg, #4A90E2, #357ABD);
+    }
+
+    /* Proceso de Trabajo */
+    .proceso-trabajo {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        margin-top: 50px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .proceso-trabajo h4 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .proceso-steps {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .proceso-step {
+        flex: 1;
+        min-width: 150px;
+        text-align: center;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .proceso-step:hover {
+        background: #e3f2fd;
+        transform: translateY(-5px);
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #4A90E2, #357ABD);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 15px;
+    }
+
+    .proceso-step h5 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 8px;
+    }
+
+    .proceso-step p {
+        font-size: 0.85rem;
+        color: #7f8c8d;
+        margin: 0;
+    }
+
+    .proceso-arrow {
+        font-size: 2rem;
+        color: #4A90E2;
+        font-weight: 700;
+    }
+
+    /* Certificaciones */
+    .certificaciones-desarrollo {
+        margin-bottom: 60px;
+    }
+
+    .certificaciones-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .cert-card {
+        background: white;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border: 2px solid #e0e0e0;
+        transition: all 0.3s ease;
+    }
+
+    .cert-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .cert-card.destacado {
+        border-color: #FFD700;
+        background: linear-gradient(135deg, #fffbf0 0%, #fff9e6 100%);
+    }
+
+    .cert-icon {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .cert-card h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .cert-card p {
+        font-size: 0.95rem;
+        color: #555;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    /* CTA Final */
+    .desarrollo-cta-final {
+        background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+        border-radius: 20px;
+        padding: 50px 40px;
+        text-align: center;
+        color: white;
+        box-shadow: 0 8px 24px rgba(74, 144, 226, 0.3);
+    }
+
+    .desarrollo-cta-final h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .desarrollo-cta-final p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        opacity: 0.95;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cta-buttons .btn {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .cta-buttons .btn-primary {
+        background: white;
+        color: #4A90E2;
+    }
+
+    .cta-buttons .btn-primary:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 16px rgba(255,255,255,0.4);
+    }
+
+    .cta-buttons .btn-whatsapp {
+        background: #25D366;
+        color: white;
+    }
+
+    .cta-buttons .btn-whatsapp:hover {
+        background: #1ebe57;
+        transform: scale(1.05);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .profesionales-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .factibilidad-cards {
+            grid-template-columns: 1fr;
+        }
+
+        .proceso-steps {
+            flex-direction: column;
+        }
+
+        .proceso-arrow {
+            transform: rotate(90deg);
+            margin: 10px 0;
+        }
+
+        .certificaciones-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+        }
+
+        .cta-buttons .btn {
+            width: 100%;
+        }
+    }
+
+</style>
 </head>
 <body>
     <nav class="navbar">
@@ -2706,6 +3217,187 @@ a, button, .clickable {
             </div>
         </div>
     </section>
+
+
+    <!-- ==================== SECCIÓN DESARROLLO INMOBILIARIO ==================== -->
+    <section class="desarrollo-inmobiliario-section">
+        <div class="container">
+            <h2 class="section-title">🏗️ Desarrollo Inmobiliario Integral</h2>
+            <div class="desarrollo-intro">
+                <p class="desarrollo-description">
+                    <strong>Somos desarrolladores inmobiliarios completos</strong> con capacidad para ejecutar proyectos de construcción desde la conceptualización hasta la entrega final. Contamos con acceso directo a todos los profesionales necesarios para garantizar el éxito de su inversión inmobiliaria.
+                </p>
+            </div>
+
+            <!-- Equipo Multidisciplinario -->
+            <div class="equipo-multidisciplinario">
+                <h3 class="subsection-title">👥 Nuestro Equipo Multidisciplinario</h3>
+                <div class="profesionales-grid">
+                    <div class="profesional-card">
+                        <div class="profesional-icon">🏗️</div>
+                        <h4>Ingenieros Civiles Estructurales</h4>
+                        <p>Diseño y cálculo de estructuras seguras y eficientes</p>
+                    </div>
+                    <div class="profesional-card">
+                        <div class="profesional-icon">🌍</div>
+                        <h4>Ingenieros de Suelos</h4>
+                        <p>Estudios geotécnicos y análisis de terrenos</p>
+                    </div>
+                    <div class="profesional-card">
+                        <div class="profesional-icon">📐</div>
+                        <h4>Ingenieros Calculistas</h4>
+                        <p>Cálculos estructurales precisos y optimizados</p>
+                    </div>
+                    <div class="profesional-card">
+                        <div class="profesional-icon">🏛️</div>
+                        <h4>Arquitectos</h4>
+                        <p>Diseño arquitectónico funcional y estético</p>
+                    </div>
+                    <div class="profesional-card">
+                        <div class="profesional-icon">⚖️</div>
+                        <h4>Abogados</h4>
+                        <p>Asesoría legal y trámites jurídicos</p>
+                    </div>
+                    <div class="profesional-card">
+                        <div class="profesional-icon">💼</div>
+                        <h4>Contadores Públicos</h4>
+                        <p>Gestión contable y financiera del proyecto</p>
+                    </div>
+                    <div class="profesional-card">
+                        <div class="profesional-icon">📋</div>
+                        <h4>Auxiliares Administrativos</h4>
+                        <p>Soporte administrativo y documentación</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicios de Prefactibilidad y Factibilidad -->
+            <div class="factibilidad-services">
+                <h3 class="subsection-title">📊 Estudios de Prefactibilidad y Factibilidad</h3>
+
+                <div class="factibilidad-cards">
+                    <!-- Prefactibilidad -->
+                    <div class="factibilidad-card prefactibilidad">
+                        <div class="factibilidad-header">
+                            <h4>🔍 Estudio de Prefactibilidad</h4>
+                            <span class="factibilidad-badge">Fase Inicial</span>
+                        </div>
+                        <p class="factibilidad-description">
+                            <strong>Análisis normativo completo</strong> del proyecto antes de invertir. Esencial para avalúos de lotes y desarrollos inmobiliarios.
+                        </p>
+                        <ul class="factibilidad-features">
+                            <li>✅ Análisis de normatividad municipal vigente</li>
+                            <li>✅ Revisión de POT (Plan de Ordenamiento Territorial)</li>
+                            <li>✅ Identificación de restricciones legales</li>
+                            <li>✅ Determinación de usos permitidos</li>
+                            <li>✅ Cálculo de potencial constructivo</li>
+                            <li>✅ Evaluación preliminar de viabilidad</li>
+                        </ul>
+                        <div class="factibilidad-cta">
+                            <p><strong>Inversión inicial</strong> con retorno garantizado en información clave</p>
+                            <a href="#contacto" class="btn-factibilidad">Solicitar Prefactibilidad</a>
+                        </div>
+                    </div>
+
+                    <!-- Factibilidad -->
+                    <div class="factibilidad-card factibilidad">
+                        <div class="factibilidad-header">
+                            <h4>📈 Estudio de Factibilidad Económica</h4>
+                            <span class="factibilidad-badge destacado">Fase Completa</span>
+                        </div>
+                        <p class="factibilidad-description">
+                            <strong>Análisis económico exhaustivo</strong> del proyecto. Se ejecuta solo si la prefactibilidad es favorable.
+                        </p>
+                        <ul class="factibilidad-features">
+                            <li>✅ Proyección financiera completa</li>
+                            <li>✅ Análisis de costos de construcción</li>
+                            <li>✅ Estudio de mercado inmobiliario</li>
+                            <li>✅ Cálculo de rentabilidad (TIR, VPN)</li>
+                            <li>✅ Cronograma de inversión y ventas</li>
+                            <li>✅ Análisis de sensibilidad y riesgos</li>
+                            <li>✅ Recomendaciones estratégicas</li>
+                        </ul>
+                        <div class="factibilidad-cta">
+                            <p><strong>Decisión de inversión</strong> respaldada por datos confiables</p>
+                            <a href="#contacto" class="btn-factibilidad destacado">Solicitar Factibilidad Completa</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proceso de Trabajo -->
+                <div class="proceso-trabajo">
+                    <h4>🔄 Nuestro Proceso de Trabajo</h4>
+                    <div class="proceso-steps">
+                        <div class="proceso-step">
+                            <div class="step-number">1</div>
+                            <h5>Solicitud Inicial</h5>
+                            <p>Recibimos su consulta y necesidades</p>
+                        </div>
+                        <div class="proceso-arrow">→</div>
+                        <div class="proceso-step">
+                            <div class="step-number">2</div>
+                            <h5>Prefactibilidad</h5>
+                            <p>Análisis normativo y legal del lote</p>
+                        </div>
+                        <div class="proceso-arrow">→</div>
+                        <div class="proceso-step">
+                            <div class="step-number">3</div>
+                            <h5>Decisión</h5>
+                            <p>Evaluación de resultados preliminares</p>
+                        </div>
+                        <div class="proceso-arrow">→</div>
+                        <div class="proceso-step">
+                            <div class="step-number">4</div>
+                            <h5>Factibilidad</h5>
+                            <p>Análisis económico completo (si procede)</p>
+                        </div>
+                        <div class="proceso-arrow">→</div>
+                        <div class="proceso-step">
+                            <div class="step-number">5</div>
+                            <h5>Desarrollo</h5>
+                            <p>Ejecución del proyecto inmobiliario</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificaciones -->
+            <div class="certificaciones-desarrollo">
+                <h3 class="subsection-title">🏆 Certificaciones Profesionales</h3>
+                <div class="certificaciones-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">📜</div>
+                        <h4>RA - Registro Nacional de Avaluadores</h4>
+                        <p>Todos nuestros avaluadores cuentan con <strong>Registro Nacional de Avaluadores (RA)</strong>, garantizando avalúos oficiales y certificados ante cualquier entidad.</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🎖️</div>
+                        <h4>RNA - Registro Adicional</h4>
+                        <p>Miembros del equipo con <strong>Registro Nacional Adicional (RNA)</strong>, ampliando nuestra capacidad técnica y legal para avalúos especializados.</p>
+                    </div>
+                    <div class="cert-card destacado">
+                        <div class="cert-icon">⭐</div>
+                        <h4>ANA AVAL-70072122</h4>
+                        <p><strong>Certificación ANA vigente</strong> - Asociación Nacional de Avaluadores. Garantía de profesionalismo y ética en todos nuestros servicios.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action Final -->
+            <div class="desarrollo-cta-final">
+                <h3>¿Listo para desarrollar su proyecto inmobiliario?</h3>
+                <p>Contáctenos para una consulta inicial sin compromiso</p>
+                <div class="cta-buttons">
+                    <a href="#contacto" class="btn btn-primary">Solicitar Consulta</a>
+                    <a href="https://wa.me/573102345678?text=Hola%2C%20estoy%20interesado%20en%20desarrollo%20inmobiliario" class="btn btn-whatsapp" target="_blank">
+                        💬 WhatsApp Directo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Sección Quiénes Somos -->
     <section id="quienes-somos" class="about-section">
