@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javier Restrepo - Avalúos Certificados 360°</title>
+    <title>Javier Restrepo - Avalúos Certificados ANA | 40 Años de Experiencia</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Avalúos inmobiliarios certificados ANA en Medellín. 40 años de experiencia en construcción, 25 años como avaluador licenciado. Ingeniero Civil Universidad de Medellín.">
+    <meta name="keywords" content="avalúos, avalúos inmobiliarios, avalúos Medellín, avaluador certificado ANA, AVAL-70072122, Javier Restrepo, ingeniero civil, avalúos comerciales, avalúos residenciales, avalúos hipotecarios">
+    <meta name="author" content="Javier Restrepo">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://infinitexglobalia-sys.github.io/javier-avaluos-web/">
+    <meta property="og:title" content="Javier Restrepo - Avalúos Certificados ANA">
+    <meta property="og:description" content="40 años de experiencia en construcción, 25 años como avaluador licenciado ANA">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Javier Restrepo - Avalúos Certificados ANA">
+    <meta property="twitter:description" content="40 años de experiencia en construcción, 25 años como avaluador licenciado">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://infinitexglobalia-sys.github.io/javier-avaluos-web/">
+
     <style>
         * {
             margin: 0;
@@ -113,7 +134,7 @@
         .hero-content {
             text-align: center;
             color: white;
-            max-width: 800px;
+            max-width: 900px;
             position: relative;
             z-index: 10;
         }
@@ -123,6 +144,12 @@
             top: 100px;
             right: 50px;
             z-index: 100;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .badge-container:hover {
+            transform: scale(1.05);
         }
 
         .ana-badge {
@@ -132,12 +159,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             text-align: center;
             max-width: 250px;
-        }
-
-        .ana-badge img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 10px;
         }
 
         .ana-badge h3 {
@@ -167,20 +188,37 @@
 
         .hero-subtitle {
             font-size: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             opacity: 0.95;
+        }
+
+        .hero-experience {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .cta-button {
             background: linear-gradient(135deg, #d4a947 0%, #f6e27a 100%);
             color: #333;
-            padding: 1rem 3rem;
+            padding: 1rem 2.5rem;
             border: none;
             border-radius: 50px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 5px 15px rgba(212, 169, 71, 0.4);
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
         }
 
         .cta-button:hover {
@@ -188,9 +226,197 @@
             box-shadow: 0 8px 25px rgba(212, 169, 71, 0.6);
         }
 
+        .cta-button.secondary {
+            background: linear-gradient(135deg, #9b7db7 0%, #c9b6e4 100%);
+            color: white;
+        }
+
+        /* Galería de Propiedades */
+        .properties-showcase {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            padding: 4rem 2rem;
+            color: white;
+        }
+
+        .properties-grid {
+            max-width: 1400px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .property-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .property-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .property-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .property-info {
+            padding: 1.5rem;
+        }
+
+        .property-info h3 {
+            color: #d4a947;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sección Quiénes Somos */
+        .about-section {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .about-banner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image .profile-circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .about-image .profile-icon {
+            font-size: 150px;
+            color: white;
+        }
+
+        .about-content h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content .credentials {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+        }
+
+        .about-content .credentials p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .about-content .credentials strong {
+            color: #667eea;
+        }
+
+        /* Oficina y Equipo */
+        .office-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+            padding: 4rem 2rem;
+        }
+
+        .office-grid {
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .office-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .office-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+
+        .office-info {
+            padding: 2rem;
+        }
+
+        .office-info h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        /* Agentes IA */
+        .team-section {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .team-grid {
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .agent-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .agent-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .agent-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .agent-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
         .services {
             padding: 4rem 2rem;
-            background: white;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
         }
 
         .container {
@@ -212,7 +438,7 @@
         }
 
         .service-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: white;
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -232,6 +458,216 @@
         .service-card h3 {
             color: #667eea;
             margin-bottom: 1rem;
+        }
+
+        /* Testimonios */
+        .testimonials-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 4rem 2rem;
+            color: white;
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #d4a947;
+        }
+
+        .testimonial-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #d4a947;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .author-info strong {
+            display: block;
+            color: #d4a947;
+        }
+
+        /* Formulario */
+        .form-section {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .form-container h2 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, #d4a947 0%, #f6e27a 100%);
+            color: #333;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Modal de Licencia */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: #333;
+        }
+
+        .license-card {
+            text-align: center;
+        }
+
+        .license-card .license-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px 15px 0 0;
+            margin: -3rem -3rem 2rem -3rem;
+        }
+
+        .license-card .license-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .license-details {
+            text-align: left;
+            padding: 1rem;
+        }
+
+        .license-details .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .license-details .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .license-details .label {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .license-details .value {
+            color: #333;
         }
 
         .footer {
@@ -283,6 +719,7 @@
         .footer-social a {
             color: #d4a947;
             transition: color 0.3s;
+            text-decoration: none;
         }
 
         .footer-social a:hover {
@@ -319,6 +756,14 @@
                 flex-direction: column;
                 gap: 1rem;
             }
+
+            .about-banner {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -326,13 +771,17 @@
     <nav class="navbar">
         <div class="nav-brand">Javier Restrepo</div>
         <div class="nav-links">
+            <a href="#quienes-somos">Quiénes Somos</a>
             <a href="#servicios">Servicios</a>
+            <a href="#equipo">Equipo</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#preavaluo">Pre-Avalúo</a>
             <a href="#contacto">Contacto</a>
             <div class="social-links">
-                <a href="https://wa.me/573166001491" target="_blank" title="WhatsApp">📱</a>
-                <a href="mailto:javieravaluo1703@gmail.com" title="Email">✉️</a>
-                <a href="https://facebook.com/javierrestrepo" target="_blank" title="Facebook">📘</a>
-                <a href="https://instagram.com/javierrestrepo" target="_blank" title="Instagram">📷</a>
+                <a href="https://wa.me/573166001491" target="_blank" title="WhatsApp" aria-label="WhatsApp">📱</a>
+                <a href="mailto:javieravaluo1703@gmail.com" title="Email" aria-label="Email">✉️</a>
+                <a href="https://facebook.com/javierrestrepo" target="_blank" title="Facebook" aria-label="Facebook">📘</a>
+                <a href="https://instagram.com/javierrestrepo" target="_blank" title="Instagram" aria-label="Instagram">📷</a>
             </div>
         </div>
     </nav>
@@ -362,7 +811,7 @@
             </svg>
         </div>
 
-        <div class="badge-container">
+        <div class="badge-container" onclick="openLicenseModal()">
             <div class="ana-badge">
                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; padding: 20px; margin: 0 auto 10px; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
                     <span style="font-size: 2.5rem; color: white;">🏆</span>
@@ -370,16 +819,145 @@
                 <h3>Certificado ANA</h3>
                 <p>Avaluador Certificado</p>
                 <p class="license-number">AVAL-70072122</p>
-                <p style="font-size: 0.8rem; color: #999; margin-top: 10px;">Asociación Nacional de Avaluadores</p>
+                <p style="font-size: 0.8rem; color: #999; margin-top: 10px;">Click para ver detalles</p>
             </div>
         </div>
 
         <div class="hero-content">
             <h1>Avalúos Certificados 360°</h1>
-            <p class="hero-subtitle">Servicios profesionales de avalúo inmobiliario con certificación ANA</p>
-            <button class="cta-button" onclick="location.href='https://wa.me/573166001491'">
-                Solicitar Avalúo
-            </button>
+            <p class="hero-subtitle">Ingeniero Civil | Universidad de Medellín</p>
+            <p class="hero-experience">
+                ✅ 40 años de experiencia en el área de construcción<br>
+                🏆 25 años como avaluador licenciado ANA
+            </p>
+            <div class="cta-buttons">
+                <a href="#preavaluo" class="cta-button">Solicitar Pre-Avalúo</a>
+                <a href="https://wa.me/573166001491" class="cta-button secondary">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Propiedades y Proyectos -->
+    <section class="properties-showcase">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Propiedades y Proyectos Avaluados</h2>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">🏠</div>
+                    <div class="property-info">
+                        <h3>Residencial Premium</h3>
+                        <p>Avalúos para casas y apartamentos de lujo en Medellín y área metropolitana</p>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">🏢</div>
+                    <div class="property-info">
+                        <h3>Comercial y Oficinas</h3>
+                        <p>Valoración de locales comerciales y edificios empresariales</p>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">🏗️</div>
+                    <div class="property-info">
+                        <h3>Proyectos en Desarrollo</h3>
+                        <p>Avalúos para proyectos de construcción y obra civil</p>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">🏭</div>
+                    <div class="property-info">
+                        <h3>Industrial</h3>
+                        <p>Bodegas, plantas industriales y complejos logísticos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section id="quienes-somos" class="about-section">
+        <div class="about-banner">
+            <div class="about-image">
+                <div class="profile-circle">
+                    <span class="profile-icon">👨‍💼</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>Javier Restrepo</h2>
+                <div class="credentials">
+                    <p><strong>🎓 Profesión:</strong> Ingeniero Civil</p>
+                    <p><strong>🏛️ Universidad:</strong> Universidad de Medellín</p>
+                    <p><strong>🏗️ Experiencia Construcción:</strong> 40 años</p>
+                    <p><strong>📊 Experiencia como Avaluador:</strong> 25 años</p>
+                    <p><strong>🏆 Certificación:</strong> Avaluador ANA AVAL-70072122</p>
+                    <p><strong>📍 Ubicación:</strong> Medellín, Colombia</p>
+                </div>
+                <p style="margin-top: 1rem; font-size: 1.1rem; line-height: 1.8;">
+                    Con cuatro décadas de experiencia en el sector de la construcción y 25 años como avaluador licenciado, 
+                    ofrezco servicios profesionales certificados por la Asociación Nacional de Avaluadores (ANA). 
+                    Mi trayectoria combina conocimiento técnico en ingeniería civil con expertise en valoración inmobiliaria, 
+                    garantizando avalúos precisos, éticos y respaldados por la normativa vigente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Oficina -->
+    <section class="office-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Oficina y Proceso</h2>
+            <div class="office-grid">
+                <div class="office-card">
+                    <div class="office-image">🏢</div>
+                    <div class="office-info">
+                        <h3>Oficina Principal Medellín</h3>
+                        <p>Instalaciones modernas equipadas con tecnología de punta para análisis y procesamiento de datos inmobiliarios.</p>
+                    </div>
+                </div>
+                <div class="office-card">
+                    <div class="office-image">💼</div>
+                    <div class="office-info">
+                        <h3>Atención Personalizada</h3>
+                        <p>Equipo profesional especializado en cada tipo de avalúo, brindando asesoría experta durante todo el proceso.</p>
+                    </div>
+                </div>
+                <div class="office-card">
+                    <div class="office-image">🤝</div>
+                    <div class="office-info">
+                        <h3>Trabajo en Campo</h3>
+                        <p>Inspecciones técnicas detalladas con herramientas profesionales y documentación fotográfica completa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Equipo/Agentes IA -->
+    <section id="equipo" class="team-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo de Agentes IA</h2>
+            <div class="team-grid">
+                <div class="agent-card">
+                    <div class="agent-icon">🤖</div>
+                    <h3>Agente de Análisis</h3>
+                    <p>Especializado en análisis de mercado y comparables. Procesa datos de propiedades similares para establecer valores de referencia precisos.</p>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-icon">📊</div>
+                    <h3>Agente de Valoración</h3>
+                    <p>Aplica metodologías de valoración avaladas por normas técnicas. Genera informes detallados con justificación de valores.</p>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-icon">📝</div>
+                    <h3>Agente de Documentación</h3>
+                    <p>Gestiona la generación de informes técnicos, certificados y documentación legal requerida para cada tipo de avalúo.</p>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-icon">🔍</div>
+                    <h3>Agente de Verificación</h3>
+                    <p>Realiza control de calidad, verifica cumplimiento normativo y valida la coherencia de todos los datos del avalúo.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -390,7 +968,7 @@
                 <div class="service-card">
                     <div class="service-icon">🏠</div>
                     <h3>Avalúos Residenciales</h3>
-                    <p>Casas, apartamentos y propiedades residenciales con certificación oficial.</p>
+                    <p>Casas, apartamentos y propiedades residenciales con certificación oficial ANA.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🏢</div>
@@ -436,6 +1014,120 @@
         </div>
     </section>
 
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Lo Que Dicen Nuestros Clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Excelente profesional. El avalúo de mi apartamento fue entregado a tiempo y con toda la documentación necesaria para mi crédito hipotecario. Muy recomendado."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨</div>
+                        <div class="author-info">
+                            <strong>Carlos Martínez</strong>
+                            <span>Avalúo Residencial</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"La experiencia de Javier en construcción se nota en cada detalle del informe. Nos ayudó muchísimo en la valoración de nuestro proyecto comercial."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div class="author-info">
+                            <strong>María González</strong>
+                            <span>Avalúo Comercial</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Profesionalismo y ética en todo el proceso. El avalúo judicial fue impecable y cumplió con todos los requisitos legales. Altamente recomendado."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👔</div>
+                        <div class="author-info">
+                            <strong>Luis Ramírez</strong>
+                            <span>Avalúo Judicial</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"25 años de experiencia como avaluador se reflejan en la calidad del servicio. Valoración precisa de nuestra finca rural con todo el respaldo técnico."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🌾</div>
+                        <div class="author-info">
+                            <strong>Ana María Pérez</strong>
+                            <span>Avalúo Rural</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Pre-Avalúo -->
+    <section id="preavaluo" class="form-section">
+        <div class="form-container">
+            <h2>📋 Solicitud de Pre-Avalúo</h2>
+            <form id="preavaluoForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono / WhatsApp *</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoPropiedad">Tipo de Propiedad *</label>
+                    <select id="tipoPropiedad" name="tipoPropiedad" required>
+                        <option value="">Seleccione...</option>
+                        <option value="residencial">Residencial (Casa/Apartamento)</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="industrial">Industrial</option>
+                        <option value="rural">Rural</option>
+                        <option value="lote">Lote/Terreno</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección de la Propiedad *</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ciudad">Ciudad *</label>
+                    <input type="text" id="ciudad" name="ciudad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="proposito">Propósito del Avalúo *</label>
+                    <select id="proposito" name="proposito" required>
+                        <option value="">Seleccione...</option>
+                        <option value="hipotecario">Crédito Hipotecario</option>
+                        <option value="compraventa">Compraventa</option>
+                        <option value="judicial">Proceso Judicial</option>
+                        <option value="herencia">Sucesión/Herencia</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="detalles">Detalles Adicionales</label>
+                    <textarea id="detalles" name="detalles" placeholder="Describa características de la propiedad, área aproximada, etc."></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Enviar Solicitud</button>
+            </form>
+        </div>
+    </section>
+
     <footer id="contacto" class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -443,6 +1135,9 @@
                 <p>📱 WhatsApp: +57 316 600 1491</p>
                 <p>✉️ Email: javieravaluo1703@gmail.com</p>
                 <p>📍 Medellín, Colombia</p>
+                <p style="margin-top: 1rem;">Horario de atención:</p>
+                <p>Lunes a Viernes: 8AM - 6PM</p>
+                <p>Sábados: 9AM - 1PM</p>
             </div>
             <div class="footer-section">
                 <h3>Certificación</h3>
@@ -450,7 +1145,9 @@
                     <p><strong>Avaluador Certificado ANA</strong></p>
                     <p><strong>Licencia:</strong> AVAL-70072122</p>
                     <p><strong>Nombre:</strong> Javier Restrepo</p>
-                    <p><strong>Especialidad:</strong> Avalúos Inmobiliarios</p>
+                    <p><strong>Profesión:</strong> Ingeniero Civil</p>
+                    <p><strong>Universidad:</strong> Universidad de Medellín</p>
+                    <p><strong>Experiencia:</strong> 40 años en construcción, 25 años como avaluador</p>
                     <p style="margin-top: 10px; font-size: 0.9rem;">Certificado por la Asociación Nacional de Avaluadores de Colombia</p>
                 </div>
             </div>
@@ -462,15 +1159,99 @@
                     <a href="https://facebook.com/javierrestrepo" target="_blank" title="Facebook">📘</a>
                     <a href="https://instagram.com/javierrestrepo" target="_blank" title="Instagram">📷</a>
                 </div>
-                <p style="margin-top: 1rem;">Horario de atención:</p>
-                <p>Lunes a Viernes: 8AM - 6PM</p>
-                <p>Sábados: 9AM - 1PM</p>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2025 Javier Restrepo - Avalúos Certificados. Todos los derechos reservados.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Certificación ANA AVAL-70072122 | Avaluador Profesional</p>
+            <p>&copy; 2025 Javier Restrepo - Avalúos Certificados ANA. Todos los derechos reservados.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Ingeni ero Civil | 40 años en construcción | 25 años avaluador licenciado | Certificación ANA AVAL-70072122</p>
         </div>
     </footer>
+
+    <!-- Modal de Licencia -->
+    <div id="licenseModal" class="modal" onclick="closeLicenseModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeLicenseModal()">&times;</span>
+            <div class="license-card">
+                <div class="license-header">
+                    <div class="license-icon">🏆</div>
+                    <h2>Licencia Profesional ANA</h2>
+                </div>
+                <div class="license-details">
+                    <div class="detail-row">
+                        <span class="label">Número de Licencia:</span>
+                        <span class="value">AVAL-70072122</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Nombre:</span>
+                        <span class="value">Javier Restrepo</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Profesión:</span>
+                        <span class="value">Ingeniero Civil</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Universidad:</span>
+                        <span class="value">Universidad de Medellín</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Especialidad:</span>
+                        <span class="value">Avalúos Inmobiliarios</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Experiencia Construcción:</span>
+                        <span class="value">40 años</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Experiencia como Avaluador:</span>
+                        <span class="value">25 años</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Entidad Certificadora:</span>
+                        <span class="value">Asociación Nacional de Avaluadores (ANA)</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Estado:</span>
+                        <span class="value" style="color: #4caf50; font-weight: bold;">✓ ACTIVA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openLicenseModal() {
+            document.getElementById('licenseModal').classList.add('active');
+        }
+
+        function closeLicenseModal(event) {
+            if (!event || event.target === event.currentTarget) {
+                document.getElementById('licenseModal').classList.remove('active');
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            const mensaje = `*Nueva Solicitud de Pre-Avalúo*%0A%0A` +
+                `*Nombre:* ${data.nombre}%0A` +
+                `*Email:* ${data.email}%0A` +
+                `*Teléfono:* ${data.telefono}%0A` +
+                `*Tipo de Propiedad:* ${data.tipoPropiedad}%0A` +
+                `*Dirección:* ${data.direccion}%0A` +
+                `*Ciudad:* ${data.ciudad}%0A` +
+                `*Propósito:* ${data.proposito}%0A` +
+                `*Detalles:* ${data.detalles || 'N/A'}`;
+
+            window.open(`https://wa.me/573166001491?text=${mensaje}`, '_blank');
+            event.target.reset();
+            alert('¡Gracias! Tu solicitud será enviada por WhatsApp.');
+        }
+    </script>
 </body>
 </html>
