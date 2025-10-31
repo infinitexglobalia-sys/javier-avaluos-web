@@ -1274,6 +1274,116 @@ a, button, .clickable {
     }
 }
 
+    
+/* ===== FIX BADGE CERTIFICACIÓN - IZQUIERDA + ANIMACIÓN ===== */
+.badge-container {
+    position: fixed !important;
+    top: 100px !important;
+    left: 20px !important;  /* A LA IZQUIERDA */
+    right: auto !important;
+    z-index: 100;
+    cursor: pointer;
+    animation: pulse-glow 2s ease-in-out infinite !important;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(212, 169, 71, 0.6);
+    }
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 40px rgba(212, 169, 71, 1), 0 0 60px rgba(212, 169, 71, 0.8);
+    }
+}
+
+.badge-container:hover {
+    animation: none;
+    transform: scale(1.15) !important;
+}
+
+.ana-badge {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    text-align: center;
+    max-width: 200px;
+    border: 3px solid #d4a947;
+}
+
+
+/* ===== INDICADOR SCROLL DOWN ===== */
+.scroll-indicator {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    animation: bounce-arrow 2s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.scroll-arrow {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #d4a947 0%, #f6e27a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(212, 169, 71, 0.6);
+}
+
+.scroll-arrow::after {
+    content: '↓';
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes bounce-arrow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.scroll-indicator:hover .scroll-arrow {
+    transform: scale(1.2);
+}
+
+/* Ocultar indicador al hacer scroll */
+.scroll-indicator.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+/* Responsive - más pequeño en móvil */
+@media only screen and (max-width: 768px) {
+    .badge-container {
+        top: 80px !important;
+        left: 10px !important;
+    }
+
+    .ana-badge {
+        max-width: 160px;
+        padding: 12px;
+    }
+
+    .scroll-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .scroll-arrow::after {
+        font-size: 24px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -2414,6 +2524,33 @@ a, button, .clickable {
             </div>
         </div>
     </section>
+
+    <!-- Indicador Scroll Down -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        <div class="scroll-arrow"></div>
+    </div>
+
+    <script>
+        // Ocultar indicador al hacer scroll
+        window.addEventListener('scroll', function() {
+            const indicator = document.getElementById('scrollIndicator');
+            if (window.scrollY > 300) {
+                indicator.classList.add('hidden');
+            } else {
+                indicator.classList.remove('hidden');
+            }
+        });
+
+        // Scroll suave al hacer click
+        document.getElementById('scrollIndicator').addEventListener('click', function() {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+
 
     <!-- Sección Quiénes Somos -->
     <section id="quienes-somos" class="about-section">
