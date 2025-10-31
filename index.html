@@ -1023,7 +1023,242 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <section style="position: relative" class="hero">
+        <!-- Floating 3D Icons -->
+        <div class="floating-icons-container">
+            <!-- Edificio -->
+            <div class="floating-icon icon-building">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="15" y="10" width="30" height="45" fill="white" opacity="0.9" stroke="white" stroke-width="2"/>
+                    <rect x="20" y="15" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="28" y="15" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="35" y="15" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="20" y="23" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="28" y="23" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="35" y="23" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="20" y="31" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="28" y="31" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="35" y="31" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="20" y="39" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="28" y="39" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="35" y="39" width="5" height="5" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="24" y="47" width="12" height="8" fill="rgba(118, 75, 162, 0.8)"/>
+                </svg>
+            </div>
+
+            <!-- Casa -->
+            <div class="floating-icon icon-house">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 15 L45 28 L45 50 L15 50 L15 28 Z" fill="white" opacity="0.9" stroke="white" stroke-width="2"/>
+                    <rect x="25" y="35" width="10" height="15" fill="rgba(118, 75, 162, 0.8)"/>
+                    <rect x="20" y="30" width="7" height="7" fill="rgba(102, 126, 234, 0.6)"/>
+                    <rect x="33" y="30" width="7" height="7" fill="rgba(102, 126, 234, 0.6)"/>
+                    <path d="M12 28 L30 12 L48 28" stroke="white" stroke-width="3" fill="none"/>
+                </svg>
+            </div>
+
+            <!-- Edificio 2 -->
+            <div class="floating-icon icon-building-2">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="12" y="8" width="26" height="38" fill="white" opacity="0.85" stroke="white" stroke-width="2"/>
+                    <rect x="16" y="12" width="4" height="4" fill="rgba(240, 147, 251, 0.6)"/>
+                    <rect x="23" y="12" width="4" height="4" fill="rgba(240, 147, 251, 0.6)"/>
+                    <rect x="30" y="12" width="4" height="4" fill="rgba(240, 147, 251, 0.6)"/>
+                    <rect x="16" y="19" width="4" height="4" fill="rgba(240, 147, 251, 0.6)"/>
+                    <rect x="23" y="19" width="4" height="4" fill="rgba(240, 147, 251, 0.6)"/>
+                    <rect x="30" y="19" width="4" height="4" fill="rgba(240, 147, 251, 0.6)"/>
+                    <rect x="16" y="26" width="4" height="4" fill="rgba(240, 147, 251, 0.6)"/>
+                    <rect x="23" y="26" width="4" height="4" fill="rgba(240, 147, 251, 0.6)"/>
+                    <rect x="30" y="26" width="4" height="4" fill="rgba(240, 147, 251, 0.6)"/>
+                    <rect x="19" y="36" width="10" height="10" fill="rgba(245, 87, 108, 0.8)"/>
+                </svg>
+            </div>
+
+            <!-- Casa 2 -->
+            <div class="floating-icon icon-house-2">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 12 L38 23 L38 42 L12 42 L12 23 Z" fill="white" opacity="0.85" stroke="white" stroke-width="2"/>
+                    <rect x="20" y="30" width="10" height="12" fill="rgba(245, 87, 108, 0.8)"/>
+                    <rect x="16" y="25" width="6" height="6" fill="rgba(240, 147, 251, 0.6)"/>
+                    <rect x="28" y="25" width="6" height="6" fill="rgba(240, 147, 251, 0.6)"/>
+                    <path d="M10 23 L25 10 L40 23" stroke="white" stroke-width="2.5" fill="none"/>
+                    <circle cx="25" cy="35" r="1.5" fill="white"/>
+                </svg>
+            </div>
+        </div>
+
+        <style>
+            .floating-icons-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                overflow: hidden;
+            }
+
+            .floating-icon {
+                position: absolute;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+                opacity: 0.8;
+            }
+
+            /* Edificio principal */
+            .icon-building {
+                top: 15%;
+                left: 10%;
+                animation: float-rotate-1 20s infinite, drift-1 25s infinite;
+            }
+
+            /* Casa principal */
+            .icon-house {
+                top: 65%;
+                right: 15%;
+                animation: float-rotate-2 18s infinite, drift-2 22s infinite;
+            }
+
+            /* Edificio secundario */
+            .icon-building-2 {
+                top: 40%;
+                right: 8%;
+                animation: float-rotate-3 22s infinite, drift-3 28s infinite;
+            }
+
+            /* Casa secundaria */
+            .icon-house-2 {
+                bottom: 20%;
+                left: 8%;
+                animation: float-rotate-4 19s infinite, drift-4 24s infinite;
+            }
+
+            /* Animación de rotación 360° + flotación */
+            @keyframes float-rotate-1 {
+                0% { 
+                    transform: translateY(0) rotate(0deg) scale(1);
+                }
+                25% { 
+                    transform: translateY(-20px) rotate(90deg) scale(1.1);
+                }
+                50% { 
+                    transform: translateY(0) rotate(180deg) scale(1);
+                }
+                75% { 
+                    transform: translateY(-20px) rotate(270deg) scale(1.1);
+                }
+                100% { 
+                    transform: translateY(0) rotate(360deg) scale(1);
+                }
+            }
+
+            @keyframes float-rotate-2 {
+                0% { 
+                    transform: translateY(0) rotate(0deg) scale(1);
+                }
+                25% { 
+                    transform: translateY(-25px) rotate(-90deg) scale(1.15);
+                }
+                50% { 
+                    transform: translateY(0) rotate(-180deg) scale(1);
+                }
+                75% { 
+                    transform: translateY(-25px) rotate(-270deg) scale(1.15);
+                }
+                100% { 
+                    transform: translateY(0) rotate(-360deg) scale(1);
+                }
+            }
+
+            @keyframes float-rotate-3 {
+                0% { 
+                    transform: translateY(0) rotate(0deg) scale(0.9);
+                }
+                33% { 
+                    transform: translateY(-18px) rotate(120deg) scale(1.05);
+                }
+                66% { 
+                    transform: translateY(-5px) rotate(240deg) scale(0.95);
+                }
+                100% { 
+                    transform: translateY(0) rotate(360deg) scale(0.9);
+                }
+            }
+
+            @keyframes float-rotate-4 {
+                0% { 
+                    transform: translateY(0) rotate(0deg) scale(0.95);
+                }
+                30% { 
+                    transform: translateY(-22px) rotate(-108deg) scale(1.08);
+                }
+                60% { 
+                    transform: translateY(-8px) rotate(-216deg) scale(1);
+                }
+                100% { 
+                    transform: translateY(0) rotate(-360deg) scale(0.95);
+                }
+            }
+
+            /* Movimiento de deriva (drift) */
+            @keyframes drift-1 {
+                0%, 100% { 
+                    left: 10%;
+                }
+                50% { 
+                    left: 15%;
+                }
+            }
+
+            @keyframes drift-2 {
+                0%, 100% { 
+                    right: 15%;
+                }
+                50% { 
+                    right: 10%;
+                }
+            }
+
+            @keyframes drift-3 {
+                0%, 100% { 
+                    right: 8%;
+                    top: 40%;
+                }
+                50% { 
+                    right: 12%;
+                    top: 35%;
+                }
+            }
+
+            @keyframes drift-4 {
+                0%, 100% { 
+                    left: 8%;
+                    bottom: 20%;
+                }
+                50% { 
+                    left: 12%;
+                    bottom: 25%;
+                }
+            }
+
+            /* Responsive - ocultar en móviles */
+            @media (max-width: 768px) {
+                .icon-building-2,
+                .icon-house-2 {
+                    display: none;
+                }
+                .icon-building {
+                    width: 50px;
+                    height: 50px;
+                }
+                .icon-house {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        </style>
+
         <div class="hero-bg">
             <div class="animated-gradient"></div>
             <div class="particle particle-1"></div>
