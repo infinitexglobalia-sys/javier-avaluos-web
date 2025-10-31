@@ -343,7 +343,7 @@
             color: white;
         }
 
-        /* About section with professional image */
+        /* About section */
         .about-section {
             background: white;
             padding: 4rem 2rem;
@@ -440,6 +440,7 @@
             transition: all 0.3s;
             background: white;
             position: relative;
+            height: 300px;
         }
 
         .work-card:hover {
@@ -449,7 +450,7 @@
 
         .work-card img {
             width: 100%;
-            height: 250px;
+            height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
@@ -463,20 +464,26 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
             color: white;
-            padding: 1.5rem;
-            transform: translateY(100%);
-            transition: transform 0.3s;
+            padding: 2rem 1.5rem;
+            transform: translateY(0);
+            transition: all 0.3s;
         }
 
-        .work-card:hover .work-overlay {
-            transform: translateY(0);
+        .work-overlay h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .work-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
 
         /* Team section */
         .team-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+            background: white;
             padding: 4rem 2rem;
         }
 
@@ -489,7 +496,7 @@
         }
 
         .agent-card {
-            background: white;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -544,7 +551,7 @@
 
         .services {
             padding: 4rem 2rem;
-            background: white;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
         }
 
         .services-grid {
@@ -554,7 +561,7 @@
         }
 
         .service-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: white;
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -570,7 +577,7 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
             transform: scale(0);
             transition: transform 0.5s;
         }
@@ -594,16 +601,15 @@
             margin-bottom: 1rem;
         }
 
-        /* Form section */
-        .form-section {
+        /* Form CTA Card Section */
+        .form-cta-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 4rem 2rem;
-            color: white;
             position: relative;
             overflow: hidden;
         }
 
-        .form-section::before {
+        .form-cta-section::before {
             content: '';
             position: absolute;
             top: -50%;
@@ -619,7 +625,7 @@
             to { transform: rotate(360deg); }
         }
 
-        .form-container {
+        .form-cta-card {
             max-width: 800px;
             margin: 0 auto;
             background: white;
@@ -628,9 +634,139 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             position: relative;
             z-index: 1;
+            text-align: center;
         }
 
-        .form-container h2 {
+        .form-cta-card .icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-cta-card h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-cta-card p {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .form-cta-card .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .benefit-item .icon-small {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-item span {
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .open-form-button {
+            background: linear-gradient(135deg, #d4a947 0%, #f6e27a 100%);
+            color: #333;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(212, 169, 71, 0.4);
+            display: inline-block;
+        }
+
+        .open-form-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 169, 71, 0.6);
+        }
+
+        /* Form Modal */
+        .form-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .form-modal.active {
+            display: flex;
+        }
+
+        .form-modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease-out;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+            transition: all 0.3s;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #f5f5f5;
+        }
+
+        .modal-close:hover {
+            color: #333;
+            background: #e0e0e0;
+            transform: rotate(90deg);
+        }
+
+        .form-modal-content h2 {
             color: #667eea;
             text-align: center;
             margin-bottom: 2rem;
@@ -691,7 +827,7 @@
             box-shadow: 0 10px 30px rgba(212, 169, 71, 0.6);
         }
 
-        /* Modal */
+        /* License Modal */
         .modal {
             display: none;
             position: fixed;
@@ -719,32 +855,6 @@
             position: relative;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             animation: modalSlideIn 0.3s ease-out;
-        }
-
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #666;
-            transition: all 0.3s;
-        }
-
-        .modal-close:hover {
-            color: #333;
-            transform: rotate(90deg);
         }
 
         .license-card {
@@ -883,6 +993,14 @@
             .cta-buttons {
                 flex-direction: column;
             }
+
+            .work-card {
+                height: 250px;
+            }
+
+            .form-modal-content {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
@@ -951,7 +1069,7 @@
             <h1>Avalúos Certificados 360°</h1>
             <p class="hero-subtitle">Servicios profesionales de avalúo inmobiliario con certificación ANA</p>
             <div class="cta-buttons">
-                <a href="#preavaluo" class="cta-button">Solicitar Pre-Avalúo</a>
+                <button onclick="openFormModal()" class="cta-button">Solicitar Pre-Avalúo</button>
                 <a href="https://wa.me/573166001491" class="cta-button secondary">Contactar por WhatsApp</a>
             </div>
         </div>
@@ -961,7 +1079,7 @@
     <section id="quienes-somos" class="about-section">
         <div class="about-banner">
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800" alt="Ingeniería Civil y Construcción" />
+                <img src="images/construccion.jpg" alt="Ingeniería Civil y Construcción" />
             </div>
             <div class="about-content">
                 <h2>Javier Restrepo</h2>
@@ -990,42 +1108,42 @@
             </p>
             <div class="work-grid">
                 <div class="work-card">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600" alt="Avalúos Residenciales" />
+                    <img src="images/casa-lupa.jpg" alt="Avalúos Residenciales" />
                     <div class="work-overlay">
                         <h3>Avalúos Residenciales</h3>
                         <p>Casas y apartamentos con precisión certificada</p>
                     </div>
                 </div>
                 <div class="work-card">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600" alt="Propiedades Rurales" />
+                    <img src="images/terreno-rural.jpg" alt="Propiedades Rurales" />
                     <div class="work-overlay">
                         <h3>Propiedades Rurales</h3>
                         <p>Fincas y terrenos agrícolas</p>
                     </div>
                 </div>
                 <div class="work-card">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600" alt="Edificios Comerciales" />
+                    <img src="images/edificios-corporativos.jpg" alt="Edificios Comerciales" />
                     <div class="work-overlay">
                         <h3>Edificios Comerciales</h3>
                         <p>Torres corporativas y oficinas</p>
                     </div>
                 </div>
                 <div class="work-card">
-                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600" alt="Avalúos Financieros" />
+                    <img src="images/documentos.jpg" alt="Avalúos Financieros" />
                     <div class="work-overlay">
                         <h3>Avalúos Financieros</h3>
                         <p>Documentación para créditos hipotecarios</p>
                     </div>
                 </div>
                 <div class="work-card">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600" alt="Maquinaria Industrial" />
+                    <img src="images/maquinaria.jpg" alt="Maquinaria Industrial" />
                     <div class="work-overlay">
                         <h3>Maquinaria y Equipos</h3>
                         <p>Valoración de activos industriales</p>
                     </div>
                 </div>
                 <div class="work-card">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600" alt="Proyectos en Construcción" />
+                    <img src="images/construccion.jpg" alt="Proyectos en Construcción" />
                     <div class="work-overlay">
                         <h3>Proyectos en Construcción</h3>
                         <p>Avalúos de obra en desarrollo</p>
@@ -1117,9 +1235,45 @@
         </div>
     </section>
 
-    <!-- Formulario de Pre-Avalúo -->
-    <section id="preavaluo" class="form-section">
-        <div class="form-container">
+    <!-- CTA Card para Formulario -->
+    <section id="preavaluo" class="form-cta-section">
+        <div class="form-cta-card">
+            <div class="icon">📋</div>
+            <h2>Solicita tu Pre-Avalúo</h2>
+            <p>
+                Obtén una evaluación preliminar de tu propiedad de manera rápida y profesional. 
+                Nuestro equipo de expertos te proporcionará una estimación precisa basada en análisis de mercado.
+            </p>
+
+            <div class="benefits">
+                <div class="benefit-item">
+                    <span class="icon-small">✓</span>
+                    <span>Respuesta en 24 horas</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon-small">✓</span>
+                    <span>Sin compromiso</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon-small">✓</span>
+                    <span>Certificación ANA</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon-small">✓</span>
+                    <span>40 años de experiencia</span>
+                </div>
+            </div>
+
+            <button onclick="openFormModal()" class="open-form-button">
+                Solicitar Pre-Avalúo Ahora →
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal del Formulario -->
+    <div id="formModal" class="form-modal" onclick="closeFormModal(event)">
+        <div class="form-modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeFormModal()">&times;</span>
             <h2>📋 Solicitud de Pre-Avalúo</h2>
             <form id="preavaluo-form" onsubmit="handleFormSubmit(event)">
                 <div class="form-group">
@@ -1180,7 +1334,7 @@
                 <button type="submit" class="form-submit">Enviar Solicitud</button>
             </form>
         </div>
-    </section>
+    </div>
 
     <footer id="contacto" class="footer">
         <div class="footer-content">
@@ -1277,6 +1431,18 @@
             }
         }
 
+        function openFormModal() {
+            document.getElementById('formModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFormModal(event) {
+            if (!event || event.target === event.currentTarget) {
+                document.getElementById('formModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
         function handleFormSubmit(event) {
             event.preventDefault();
 
@@ -1300,7 +1466,8 @@
             // Redirigir a WhatsApp
             window.open(`https://wa.me/573166001491?text=${mensaje}`, '_blank');
 
-            // Limpiar formulario
+            // Cerrar modal y limpiar formulario
+            closeFormModal();
             event.target.reset();
             alert('¡Gracias! Tu solicitud será enviada por WhatsApp. Por favor completa el envío en la ventana que se abrió.');
         }
@@ -1317,6 +1484,14 @@
                     });
                 }
             });
+        });
+
+        // Cerrar modales con ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLicenseModal();
+                closeFormModal();
+            }
         });
     </script>
 </body>
