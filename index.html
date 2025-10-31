@@ -1397,6 +1397,175 @@ div[style*="float-spin"] svg {
     pointer-events: none !important;
 }
 
+    
+/* ===== FIX BADGE CERTIFICACIÓN - TAMAÑO PROPORCIONAL ===== */
+
+.badge-container {
+    position: fixed !important;
+    top: 90px !important;  /* Más abajo para no tapar header */
+    left: 15px !important;
+    right: auto !important;
+    z-index: 100 !important;
+    cursor: pointer;
+    animation: pulse-glow 2s ease-in-out infinite !important;
+    max-width: 140px !important;  /* Límite de ancho */
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(212, 169, 71, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(212, 169, 71, 0.9);
+    }
+}
+
+.badge-container:hover {
+    animation: none;
+    transform: scale(1.1) !important;
+}
+
+.ana-badge {
+    background: white;
+    border-radius: 12px;
+    padding: 12px !important;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    text-align: center;
+    border: 2px solid #d4a947;
+}
+
+.ana-badge h3 {
+    font-size: 0.9rem !important;
+    margin-bottom: 3px !important;
+}
+
+.ana-badge p {
+    font-size: 0.75rem !important;
+    margin: 3px 0 !important;
+}
+
+.ana-badge .license-number {
+    font-size: 0.85rem !important;
+    margin-top: 5px !important;
+}
+
+/* Icono del badge más pequeño */
+.ana-badge > div[style*="gradient"] {
+    width: 50px !important;
+    height: 50px !important;
+    padding: 10px !important;
+    margin: 0 auto 8px !important;
+}
+
+.ana-badge > div[style*="gradient"] span {
+    font-size: 1.5rem !important;
+}
+
+/* RESPONSIVE: Más pequeño en móviles */
+@media only screen and (max-width: 768px) {
+    .badge-container {
+        top: 75px !important;
+        left: 8px !important;
+        max-width: 110px !important;
+    }
+
+    .ana-badge {
+        padding: 8px !important;
+        border-radius: 10px;
+    }
+
+    .ana-badge h3 {
+        font-size: 0.75rem !important;
+    }
+
+    .ana-badge p {
+        font-size: 0.65rem !important;
+    }
+
+    .ana-badge .license-number {
+        font-size: 0.7rem !important;
+    }
+
+    .ana-badge > div[style*="gradient"] {
+        width: 40px !important;
+        height: 40px !important;
+        padding: 8px !important;
+    }
+
+    .ana-badge > div[style*="gradient"] span {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Móviles muy pequeños (iPhone SE) */
+@media only screen and (max-width: 375px) {
+    .badge-container {
+        max-width: 95px !important;
+        top: 70px !important;
+        left: 5px !important;
+    }
+
+    .ana-badge {
+        padding: 6px !important;
+    }
+
+    .ana-badge h3 {
+        font-size: 0.7rem !important;
+    }
+
+    .ana-badge p {
+        font-size: 0.6rem !important;
+    }
+}
+
+/* Orientación horizontal (rotado) */
+@media only screen and (orientation: landscape) and (max-height: 500px) {
+    .badge-container {
+        top: 60px !important;
+        left: 5px !important;
+        max-width: 90px !important;
+        transform: scale(0.85);
+    }
+}
+
+/* Iconos flotantes - GARANTIZAR que estén detrás del badge */
+.floating-icon,
+div[style*="float-spin"],
+.floating-icons-container,
+div[style*="position: absolute"][style*="animation"] {
+    z-index: 1 !important;
+    opacity: 0.18 !important;
+}
+
+/* Asegurar jerarquía de z-index */
+.hero-bg,
+.animated-gradient,
+.particle {
+    z-index: 0 !important;
+}
+
+.floating-icons-container {
+    z-index: 1 !important;
+}
+
+.hero-content {
+    z-index: 10 !important;
+}
+
+.badge-container {
+    z-index: 100 !important;
+}
+
+.scroll-indicator {
+    z-index: 999 !important;
+}
+
+.navbar {
+    z-index: 1000 !important;
+}
+
     </style>
 </head>
 <body>
