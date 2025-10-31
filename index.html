@@ -1231,6 +1231,49 @@ a, button, .clickable {
     touch-action: manipulation;
 }
 
+    
+/* ===== FIX NAVEGACIÓN MÓVIL - NO TAPA CONTENIDO ===== */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        max-height: 70px !important;
+        padding: 0.5rem 1rem !important;
+        overflow: visible !important;
+    }
+
+    body {
+        padding-top: 75px !important;
+    }
+
+    .nav-links {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 0.3rem !important;
+        justify-content: center !important;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem !important;
+        padding: 0.3rem 0.5rem !important;
+        white-space: nowrap !important;
+    }
+
+    .social-links {
+        gap: 0.3rem !important;
+    }
+
+    .social-links a {
+        font-size: 0.9rem !important;
+    }
+
+    .nav-brand {
+        font-size: 1.1rem !important;
+    }
+
+    .hero {
+        padding-top: 1rem !important;
+    }
+}
+
     </style>
 </head>
 <body>
