@@ -29,12 +29,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            backdrop-filter: blur(10px);
         }
 
         .nav-brand {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .nav-links {
@@ -46,11 +50,23 @@
         .nav-links a {
             color: #333;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            position: relative;
         }
 
-        .nav-links a:hover {
-            color: #667eea;
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .social-links {
@@ -65,7 +81,7 @@
         }
 
         .social-links a:hover {
-            transform: scale(1.2);
+            transform: scale(1.2) rotate(5deg);
         }
 
         .hero {
@@ -87,6 +103,81 @@
             overflow: hidden;
         }
 
+        /* Animated gradient background */
+        .animated-gradient {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                rgba(102, 126, 234, 0.3) 0%, 
+                rgba(118, 75, 162, 0.3) 25%,
+                rgba(212, 169, 71, 0.3) 50%,
+                rgba(246, 226, 122, 0.3) 75%,
+                rgba(102, 126, 234, 0.3) 100%);
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-25%, -25%) rotate(180deg); }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .particle-1 {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(212, 169, 71, 0.3) 0%, transparent 70%);
+            top: 20%;
+            left: 10%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .particle-2 {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(155, 125, 183, 0.2) 0%, transparent 70%);
+            top: 60%;
+            right: 15%;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        .particle-3 {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(246, 226, 122, 0.4) 0%, transparent 70%);
+            bottom: 30%;
+            left: 20%;
+            animation: float 18s ease-in-out infinite;
+        }
+
+        .particle-4 {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+            top: 40%;
+            right: 30%;
+            animation: float 22s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 30px) scale(0.9);
+            }
+        }
+
+        /* Animated SVG waves */
         .hero-bg svg {
             position: absolute;
             width: 100%;
@@ -95,6 +186,7 @@
 
         .wave {
             animation: wave 8s ease-in-out infinite;
+            transform-origin: center;
         }
 
         .wave2 {
@@ -106,16 +198,34 @@
         }
 
         @keyframes wave {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-30px) scale(1.05); }
+            0%, 100% { 
+                transform: translateY(0) scaleY(1);
+                opacity: 0.6;
+            }
+            50% { 
+                transform: translateY(-30px) scaleY(1.1);
+                opacity: 0.8;
+            }
         }
 
         .hero-content {
             text-align: center;
             color: white;
-            max-width: 800px;
+            max-width: 900px;
             position: relative;
             z-index: 10;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .badge-container {
@@ -125,17 +235,24 @@
             z-index: 100;
             cursor: pointer;
             transition: transform 0.3s;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         .badge-container:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
+            animation: none;
         }
 
         .ana-badge {
             background: white;
             border-radius: 15px;
             padding: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
             text-align: center;
             max-width: 250px;
         }
@@ -162,7 +279,13 @@
         h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 2px 2px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.2); }
+            to { text-shadow: 2px 2px 8px rgba(0,0,0,0.3), 0 0 30px rgba(255,255,255,0.4); }
         }
 
         .hero-subtitle {
@@ -186,15 +309,33 @@
             border-radius: 50px;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
             box-shadow: 0 5px 15px rgba(212, 169, 71, 0.4);
             text-decoration: none;
             display: inline-block;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(212, 169, 71, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 169, 71, 0.6);
         }
 
         .cta-button.secondary {
@@ -202,7 +343,7 @@
             color: white;
         }
 
-        /* Sección Quiénes Somos */
+        /* About section with professional image */
         .about-section {
             background: white;
             padding: 4rem 2rem;
@@ -219,23 +360,19 @@
 
         .about-image {
             text-align: center;
+            position: relative;
         }
 
-        .about-image .profile-circle {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
         }
 
-        .about-image .profile-icon {
-            font-size: 150px;
-            color: white;
+        .about-image img:hover {
+            transform: scale(1.05) rotate(2deg);
         }
 
         .about-content h2 {
@@ -244,23 +381,100 @@
             margin-bottom: 1rem;
         }
 
-        .about-content .credentials {
+        .credentials {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             padding: 1.5rem;
             border-radius: 15px;
             margin: 1rem 0;
+            border-left: 5px solid #667eea;
         }
 
-        .about-content .credentials p {
+        .credentials p {
             margin: 0.5rem 0;
             font-size: 1.1rem;
         }
 
-        .about-content .credentials strong {
+        .credentials strong {
             color: #667eea;
         }
 
-        /* Agentes/Equipo */
+        /* Work Gallery Section */
+        .work-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #667eea;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #d4a947 0%, #f6e27a 100%);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            background: white;
+            position: relative;
+        }
+
+        .work-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .work-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .work-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .work-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .work-card:hover .work-overlay {
+            transform: translateY(0);
+        }
+
+        /* Team section */
         .team-section {
             background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
             padding: 4rem 2rem;
@@ -280,17 +494,47 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .agent-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: scaleX(0);
             transition: transform 0.3s;
+        }
+
+        .agent-card:hover::before {
+            transform: scaleX(1);
         }
 
         .agent-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
         .agent-icon {
             font-size: 4rem;
             margin-bottom: 1rem;
+            display: inline-block;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .agent-card:hover .agent-icon {
+            animation: none;
+            transform: scale(1.2) rotate(10deg);
         }
 
         .agent-card h3 {
@@ -301,18 +545,6 @@
         .services {
             padding: 4rem 2rem;
             background: white;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #667eea;
         }
 
         .services-grid {
@@ -326,12 +558,30 @@
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            transform: scale(0);
+            transition: transform 0.5s;
+        }
+
+        .service-card:hover::after {
+            transform: scale(1);
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
         .service-icon {
@@ -344,11 +594,29 @@
             margin-bottom: 1rem;
         }
 
-        /* Formulario de Pre-Avalúo */
+        /* Form section */
         .form-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 4rem 2rem;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .form-container {
@@ -357,7 +625,9 @@
             background: white;
             padding: 3rem;
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
         }
 
         .form-container h2 {
@@ -385,7 +655,7 @@
             border: 2px solid #e0e0e0;
             border-radius: 8px;
             font-size: 1rem;
-            transition: border-color 0.3s;
+            transition: all 0.3s;
         }
 
         .form-group input:focus,
@@ -393,6 +663,8 @@
         .form-group textarea:focus {
             outline: none;
             border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
         }
 
         .form-group textarea {
@@ -410,14 +682,16 @@
             cursor: pointer;
             width: 100%;
             font-weight: bold;
-            transition: transform 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(212, 169, 71, 0.4);
         }
 
         .form-submit:hover {
             transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 169, 71, 0.6);
         }
 
-        /* Modal de Licencia */
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -429,6 +703,7 @@
             background-color: rgba(0,0,0,0.7);
             align-items: center;
             justify-content: center;
+            backdrop-filter: blur(5px);
         }
 
         .modal.active {
@@ -443,6 +718,18 @@
             width: 90%;
             position: relative;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .modal-close {
@@ -452,11 +739,12 @@
             font-size: 2rem;
             cursor: pointer;
             color: #666;
-            transition: color 0.3s;
+            transition: all 0.3s;
         }
 
         .modal-close:hover {
             color: #333;
+            transform: rotate(90deg);
         }
 
         .license-card {
@@ -549,11 +837,12 @@
 
         .footer-social a {
             color: #d4a947;
-            transition: color 0.3s;
+            transition: all 0.3s;
         }
 
         .footer-social a:hover {
             color: #9b7db7;
+            transform: translateY(-5px);
         }
 
         .copyright {
@@ -602,6 +891,7 @@
         <div class="nav-brand">Javier Restrepo</div>
         <div class="nav-links">
             <a href="#quienes-somos">Quiénes Somos</a>
+            <a href="#trabajo">Nuestro Trabajo</a>
             <a href="#servicios">Servicios</a>
             <a href="#equipo">Equipo</a>
             <a href="#preavaluo">Pre-Avalúo</a>
@@ -617,6 +907,11 @@
 
     <section class="hero">
         <div class="hero-bg">
+            <div class="animated-gradient"></div>
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
             <svg viewBox="0 0 1200 600" preserveAspectRatio="none">
                 <defs>
                     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -666,16 +961,14 @@
     <section id="quienes-somos" class="about-section">
         <div class="about-banner">
             <div class="about-image">
-                <div class="profile-circle">
-                    <span class="profile-icon">👨‍💼</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800" alt="Ingeniería Civil y Construcción" />
             </div>
             <div class="about-content">
                 <h2>Javier Restrepo</h2>
                 <div class="credentials">
                     <p><strong>🎓 Profesión:</strong> Ingeniero Civil</p>
                     <p><strong>🏛️ Universidad:</strong> Universidad de Medellín</p>
-                    <p><strong>📊 Experiencia:</strong> 40 años en el sector</p>
+                    <p><strong>💼 Experiencia:</strong> 40 años en el sector</p>
                     <p><strong>🏆 Certificación:</strong> Avaluador ANA AVAL-70072122</p>
                     <p><strong>📍 Ubicación:</strong> Medellín, Colombia</p>
                 </div>
@@ -684,6 +977,60 @@
                     ofrezco servicios profesionales certificados por la Asociación Nacional de Avaluadores (ANA). 
                     Mi compromiso es brindar valoraciones precisas, éticas y respaldadas por la normativa vigente.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nuestro Trabajo -->
+    <section id="trabajo" class="work-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro Trabajo</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: #666;">
+                Proyectos evaluados en diferentes categorías
+            </p>
+            <div class="work-grid">
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600" alt="Avalúos Residenciales" />
+                    <div class="work-overlay">
+                        <h3>Avalúos Residenciales</h3>
+                        <p>Casas y apartamentos con precisión certificada</p>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600" alt="Propiedades Rurales" />
+                    <div class="work-overlay">
+                        <h3>Propiedades Rurales</h3>
+                        <p>Fincas y terrenos agrícolas</p>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600" alt="Edificios Comerciales" />
+                    <div class="work-overlay">
+                        <h3>Edificios Comerciales</h3>
+                        <p>Torres corporativas y oficinas</p>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600" alt="Avalúos Financieros" />
+                    <div class="work-overlay">
+                        <h3>Avalúos Financieros</h3>
+                        <p>Documentación para créditos hipotecarios</p>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600" alt="Maquinaria Industrial" />
+                    <div class="work-overlay">
+                        <h3>Maquinaria y Equipos</h3>
+                        <p>Valoración de activos industriales</p>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600" alt="Proyectos en Construcción" />
+                    <div class="work-overlay">
+                        <h3>Proyectos en Construcción</h3>
+                        <p>Avalúos de obra en desarrollo</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -699,7 +1046,7 @@
                     <p>Especializado en análisis de mercado y comparables. Procesa datos de propiedades similares para establecer valores de referencia precisos.</p>
                 </div>
                 <div class="agent-card">
-                    <div class="agent-icon">📊</div>
+                    <div class="agent-icon">💼</div>
                     <h3>Agente de Valoración</h3>
                     <p>Aplica metodologías de valoración avaladas por normas técnicas. Genera informes detallados con justificación de valores.</p>
                 </div>
@@ -757,7 +1104,7 @@
                     <p>Valoraciones para créditos y préstamos bancarios.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📊</div>
+                    <div class="service-icon">💼</div>
                     <h3>Valoración de Activos</h3>
                     <p>Maquinaria, equipos y activos empresariales.</p>
                 </div>
@@ -774,7 +1121,7 @@
     <section id="preavaluo" class="form-section">
         <div class="form-container">
             <h2>📋 Solicitud de Pre-Avalúo</h2>
-            <form id="preavaluoForm" onsubmit="handleFormSubmit(event)">
+            <form id="preavaluo-form" onsubmit="handleFormSubmit(event)">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo *</label>
                     <input type="text" id="nombre" name="nombre" required>
@@ -957,6 +1304,20 @@
             event.target.reset();
             alert('¡Gracias! Tu solicitud será enviada por WhatsApp. Por favor completa el envío en la ventana que se abrió.');
         }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
