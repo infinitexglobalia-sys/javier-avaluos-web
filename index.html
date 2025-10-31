@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javier Estrepo - Avalúos Profesionales | Lonja</title>
+    <title>Javier Restrepo - Avaluador ANA | Avalúos Profesionales en Antioquia</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Avalúos profesionales certificados por ANA en Antioquia. Avalúos de propiedades urbanas, rurales, comerciales. +20 años de experiencia. Solicita tu pre-avalúo gratis.">
+    <meta name="keywords" content="avalúos antioquia, avaluador certificado ANA, avalúos catastrales, avalúos comerciales, avalúos para sucesiones, avalúos para bancos">
+    <meta name="author" content="Javier Restrepo">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://javier-restrepo-avaluos.vercel.app/">
+    <meta property="og:title" content="Javier Restrepo - Avaluador Certificado ANA">
+    <meta property="og:description" content="Avalúos profesionales certificados. +20 años de experiencia en Antioquia.">
+    <meta property="og:image" content="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/188047/generic/file_upload/request/73f16a231a5c53cca53f11a156513682">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://javier-restrepo-avaluos.vercel.app/">
+    <meta property="twitter:title" content="Javier Restrepo - Avaluador Certificado ANA">
+    <meta property="twitter:description" content="Avalúos profesionales certificados. +20 años de experiencia en Antioquia.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+
     <style>
         * {
             margin: 0;
@@ -15,101 +38,121 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #fff;
+            overflow-x: hidden;
         }
 
-        /* ===== HEADER ===== */
+        /* Header Styles */
         header {
-            background: linear-gradient(135deg, #1a3a52 0%, #2c5f8d 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            flex-wrap: wrap;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
+        .logo-section {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 1rem;
         }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: #FFD700;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1a3a52;
+        .ana-badge {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
             font-weight: bold;
-            font-size: 1.2rem;
+            color: #1e3c72;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            animation: pulse 2s infinite;
         }
 
-        nav {
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        header h1 {
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .cta-header {
             display: flex;
-            gap: 2rem;
-            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
         }
 
-        nav a {
+        .btn-primary-header {
+            background: #ff6b35;
             color: white;
+            padding: 1rem 2rem;
             text-decoration: none;
-            transition: color 0.3s;
-            font-size: 0.95rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.4);
+            border: none;
+            cursor: pointer;
+            animation: bounce 2s infinite;
         }
 
-        nav a:hover {
-            color: #FFD700;
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
 
-        .whatsapp-btn {
-            background: #25D366;
+        .btn-primary-header:hover {
+            background: #ff5722;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255,107,53,0.6);
+        }
+
+        .btn-secondary-header {
+            background: transparent;
             color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 25px;
+            padding: 1rem 2rem;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: background 0.3s;
-            font-weight: 600;
+            border-radius: 50px;
+            font-weight: bold;
+            border: 2px solid white;
+            transition: all 0.3s;
+            cursor: pointer;
         }
 
-        .whatsapp-btn:hover {
-            background: #20ba58;
+        .btn-secondary-header:hover {
+            background: white;
+            color: #1e3c72;
         }
 
-        /* ===== HERO ===== */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1a3a52 0%, #2c5f8d 100%);
-            color: white;
-            padding: 6rem 0;
+            background: linear-gradient(135deg, rgba(30,60,114,0.95) 0%, rgba(42,82,152,0.95) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231e3c72" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 4rem 2rem;
             text-align: center;
+            color: white;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
+        .hero h2 {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            font-weight: 700;
-            line-height: 1.2;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
         }
 
         .hero p {
@@ -118,368 +161,241 @@
             opacity: 0.95;
         }
 
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
-        .stat {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
+        /* Services Section */
+        .services {
+            padding: 4rem 2rem;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
         }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #FFD700;
-        }
-
-        .stat-label {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            margin-top: 0.5rem;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: #FFD700;
-            color: #1a3a52;
-        }
-
-        .btn-primary:hover {
-            background: #FFC700;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255,215,0,0.3);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #1a3a52;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: transparent;
-            color: white;
-        }
-
-        /* ===== SERVICIOS ===== */
-        .servicios {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .section-title {
+        .services h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #1a3a52;
+            color: #1e3c72;
         }
 
-        .servicios-grid {
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            margin-bottom: 3rem;
         }
 
-        .servicio-card {
+        .service-card {
             background: white;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: all 0.3s;
-            border-top: 4px solid #2c5f8d;
+            border-left: 5px solid #1e3c72;
         }
 
-        .servicio-card:hover {
+        .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-            border-top-color: #FFD700;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-left-color: #ff6b35;
         }
 
-        .servicio-icon {
-            font-size: 2.5rem;
+        .service-card h3 {
+            color: #1e3c72;
             margin-bottom: 1rem;
-        }
-
-        .servicio-card h3 {
-            color: #1a3a52;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .servicio-card p {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* ===== PROCESO ===== */
-        .proceso {
-            padding: 5rem 0;
-        }
-
-        .proceso-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .paso {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .paso-numero {
-            width: 60px;
-            height: 60px;
-            background: #2c5f8d;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0 auto 1rem;
-        }
-
-        .paso h3 {
-            color: #1a3a52;
-            margin-bottom: 1rem;
-        }
-
-        .paso p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        /* ===== CASOS DE ÉXITO ===== */
-        .casos {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .casos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .caso-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-
-        .caso-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .avatar {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #2c5f8d, #FFD700);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
             font-size: 1.5rem;
-        }
-
-        .caso-info h4 {
-            color: #1a3a52;
-            margin-bottom: 0.2rem;
-        }
-
-        .caso-info p {
-            color: #999;
-            font-size: 0.85rem;
-        }
-
-        .caso-card p {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .rating {
-            color: #FFD700;
-            font-size: 1.1rem;
-            margin-top: 1rem;
-        }
-
-        /* ===== FORMULARIO ===== */
-        .contacto {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #1a3a52 0%, #2c5f8d 100%);
-            color: white;
-        }
-
-        .contacto .section-title {
-            color: white;
-        }
-
-        .formulario {
-            max-width: 600px;
-            margin: 0 auto;
-            display: grid;
-            gap: 1.5rem;
-        }
-
-        .form-group {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .form-group label {
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+        .service-icon {
+            font-size: 1.8rem;
         }
 
-        .form-group input,
-        .form-group textarea {
-            padding: 0.8rem;
-            border: none;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
+        /* CTA Buttons in Services */
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            border-radius: 20px;
+            margin: 3rem 0;
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
+        .cta-section h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(255,215,0,0.3);
+        .cta-section p {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
 
-        .form-submit {
-            background: #FFD700;
-            color: #1a3a52;
-            padding: 1rem;
-            border: none;
-            border-radius: 5px;
-            font-weight: 700;
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            overflow-y: auto;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            margin: 2% auto;
+            padding: 0;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            animation: slideIn 0.4s;
+            position: relative;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .modal-header p {
+            margin: 0.5rem 0 0 0;
+            opacity: 0.9;
+        }
+
+        .close {
+            color: white;
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
-            font-size: 1rem;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
         }
 
-        .form-submit:hover {
-            background: #FFC700;
-            transform: translateY(-2px);
+        .close:hover {
+            background: rgba(255,255,255,0.3);
+            transform: rotate(90deg);
         }
 
-        /* ===== FOOTER ===== */
-        footer {
-            background: #1a3a52;
-            color: white;
-            padding: 3rem 0 1rem;
-            text-align: center;
+        .modal-body {
+            padding: 2rem;
         }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+        /* Progress Bar */
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 2rem;
-            text-align: left;
+            position: relative;
         }
 
-        .footer-section h4 {
-            margin-bottom: 1rem;
-            color: #FFD700;
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #e0e0e0;
+            z-index: 0;
         }
 
-        .footer-section p,
-        .footer-section a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            font-size: 0.9rem;
-            line-height: 1.8;
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            position: relative;
+            z-index: 1;
         }
 
-        .footer-section a:hover {
-            color: #FFD700;
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s;
         }
 
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 2rem;
-            color: rgba(255,255,255,0.7);
+        .step-circle.active {
+            background: #1e3c72;
+            color: white;
+            transform: scale(1.2);
+        }
+
+        .step-circle.completed {
+            background: #4caf50;
+            color: white;
+        }
+
+        .step-label {
             font-size: 0.85rem;
+            text-align: center;
+            color: #666;
         }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
+        .step-label.active {
+            color: #1e3c72;
+            font-weight: bold;
         }
 
-        /* ===== ANIMACIONES ===== */
+        /* Form Steps */
+        .form-step {
+            display: none;
+            animation: fadeInUp 0.5s;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -487,336 +403,1252 @@
             }
         }
 
-        .servicio-card, .paso, .caso-card {
-            animation: fadeInUp 0.6s ease-out;
+        .form-group {
+            margin-bottom: 1.5rem;
         }
 
-        /* ===== WHATSAPP FLOTANTE ===== */
-        .whatsapp-flotante {
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group label .required {
+            color: #ff6b35;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e3c72;
+            box-shadow: 0 0 0 3px rgba(30,60,114,0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group small {
+            display: block;
+            margin-top: 0.3rem;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Radio Button Grid */
+        .radio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .radio-option {
+            position: relative;
+        }
+
+        .radio-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .radio-option label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            background: white;
+            min-height: 120px;
+        }
+
+        .radio-option label:hover {
+            border-color: #1e3c72;
+            background: #f8f9fa;
+        }
+
+        .radio-option input[type="radio"]:checked + label {
+            border-color: #1e3c72;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .radio-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .radio-label-text {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Form Navigation */
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-prev {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn-prev:hover {
+            background: #d0d0d0;
+        }
+
+        .btn-next,
+        .btn-submit {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(30,60,114,0.3);
+        }
+
+        .btn-next:hover,
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30,60,114,0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Summary Section */
+        .summary-section {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .summary-section h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+
+        .summary-label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        .summary-value {
+            color: #333;
+            text-align: right;
+        }
+
+        /* Success Message */
+        .success-message {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: #4caf50;
+            margin-bottom: 1rem;
+            animation: scaleIn 0.5s;
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+
+        .success-message h3 {
+            color: #4caf50;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .success-message p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+        }
+
+        .whatsapp-btn:hover {
+            background: #20BA5A;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-rating {
+            color: #ffc107;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 2rem;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1e3c72;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
             width: 60px;
             height: 60px;
-            background: #25D366;
-            border-radius: 50%;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 100;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            cursor: pointer;
-            z-index: 999;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            text-decoration: none;
             animation: bounce 2s infinite;
+            text-decoration: none;
+            transition: all 0.3s;
         }
 
-        .whatsapp-flotante:hover {
-            background: #20ba58;
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 20px rgba(37,211,102,0.5);
         }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
         }
 
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            margin-bottom: 2rem;
+        }
+
+        .footer-info p {
+            margin: 0.5rem 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .whatsapp-flotante {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-                bottom: 20px;
-                right: 20px;
-            }
-
-            header .container {
+            .header-content {
                 flex-direction: column;
+                text-align: center;
                 gap: 1rem;
             }
 
-            .logo {
-                font-size: 1.4rem;
+            header h1 {
+                font-size: 1.5rem;
             }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-header {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary-header,
+            .btn-secondary-header {
+                width: 100%;
+                text-align: center;
+            }
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 5% auto;
+            }
+
+            .radio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .progress-bar {
+                font-size: 0.8rem;
+            }
+
+            .step-circle {
+                width: 30px;
+                height: 30px;
+                font-size: 0.85rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+        }
+
+        /* Loading Spinner */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Validation Styles */
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: #ff6b35;
+        }
+
+        .error-message {
+            color: #ff6b35;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+            display: none;
+        }
+
+        .form-group.error .error-message {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-icon">JR</div>
-                    <span>Javier Restrepo Tabares</span>
+        <div class="header-content">
+            <div class="logo-section">
+                <div>
+                    <h1>🏠 Javier Restrepo</h1>
+                    <p>Avaluador Profesional</p>
                 </div>
-                <nav>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#proceso">Proceso</a>
-                    <a href="#caso">Casos</a>
-                    <a href="#contacto">Contacto</a>
-                    <a href="https://wa.me/573108338666" class="whatsapp-btn">
-                        💬 WhatsApp
-                    </a>
-                </nav>
+                <div class="ana-badge">✓ Certificado ANA</div>
+            </div>
+            <div class="cta-header">
+                <button class="btn-primary-header" onclick="openPreAvaluoModal()">
+                    📋 Solicitar Pre-Avalúo Gratis
+                </button>
+                <a href="https://wa.me/573023074568?text=Hola%20Javier,%20necesito%20información%20sobre%20avalúos" class="btn-secondary-header" target="_blank">
+                    📞 Contactar por WhatsApp
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Avalúos Profesionales de Confianza</h1>
-            <p>40+ años de experiencia | Certificado ANA AVAL-70072122</p>
-            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">Sabaneta, Antioquia | Carrera 39A # 61B Sur - 135</p>
-            
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-number">40.</div>
-                    <div class="stat-label">A�os de Experiencia</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Avalúos Completados</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">24h</div>
-                    <div class="stat-label">Entrega R��pida</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">9</div>
-                    <div class="stat-label">Tipos de Avalúos</div>
-                </div>
-            </div>
-
-            <div class="hero-cta">
-                <a href="#contacto" class="btn btn-primary">Solicitar Avalúo</a>
-                <a href="https://wa.me/573108338666" class="btn btn-secondary">Consulta R��pida</a>
-            </div>
-            
+            <h2>Avalúos Profesionales Certificados en Antioquia</h2>
+            <p>Más de 20 años de experiencia en avalúos catastrales y comerciales</p>
+            <button class="btn-primary-header" onclick="openPreAvaluoModal()">
+                🚀 Empezar Mi Pre-Avalúo Ahora (2 minutos)
+            </button>
         </div>
     </section>
 
-    <!-- SERVICIOS -->
-    <section class="services" id="servicios">
+    <!-- Services Section -->
+    <section class="services">
         <div class="container">
-            <h2 class="section-title">Nuestros Servicuos</h2>
+            <h2>Nuestros Servicios de Avalúos</h2>
             <div class="services-grid">
-                <div class="servicio-card">
-                    <div class="servicio-icon">🏠</div>
-                    <h3>Avalúo Residencial</h3>
-                    <p>Tasación profesional de propiedades residenciales para compraventa, hipoteca o seguros.</p>
+                <div class="service-card">
+                    <h3><span class="service-icon">🏢</span> Avalúos Catastrales</h3>
+                    <p>Avalúos técnicos y catastrales con respaldo ANA para trámites oficiales, actualizaciones prediales y certificaciones ante entidades gubernamentales.</p>
                 </div>
-                <div class="servicio-card">
-                    <div class="servicio-icon">🏢</div>
-                    <h3>Avalúo Comercial</h3>
-                    <p>Evaluación integral de propiedades comerciales, locales y edificios de inversión.</p>
+                <div class="service-card">
+                    <h3><span class="service-icon">🏪</span> Avalúos Comerciales</h3>
+                    <p>Valoración profesional de bienes inmuebles para transacciones comerciales, compraventa, arrendamiento y determinación de valor de mercado.</p>
                 </div>
-                <div class="servicio-card">
-                    <div class="servicio-icon">🏭</div>
-                    <h3>Avalúo Industrial</h3>
-                    <p>Tasación de naves industriales, bodegas y espacios de producción.</p>
+                <div class="service-card">
+                    <h3><span class="service-icon">🏦</span> Avalúos Bancarios</h3>
+                    <p>Avalúos especializados para entidades financieras, créditos hipotecarios, garantías bancarias y procesos de financiación.</p>
                 </div>
-                <div class="serviceo-card">
-                    <div class="serviceo-icon">🌾</div>
-                    <h3>Avalúo Agrícola</h3>
-                    <p>Valuación de tierras, fincas y propiedades rurales.</p>
+                <div class="service-card">
+                    <h3><span class="service-icon">⚖️</span> Avalúos para Sucesiones</h3>
+                    <p>Valoración de bienes inmuebles para procesos sucesorales, herencias, particiones y trámites notariales con validez legal.</p>
                 </div>
-                <div class="serviceo-card">
-                    <div class="serviceo-icon">⚖️</div>
-                    <h3>Avalúo Legal</h3>
-                    <p>Tasaciones requeridas para procesos legales y litigios inmobiliarios.</p>
+                <div class="service-card">
+                    <h3><span class="service-icon">🤝</span> Avalúos para Permutas</h3>
+                    <p>Determinación técnica del valor de propiedades para procesos de permuta, intercambio de bienes y negociaciones equitativas.</p>
                 </div>
-                <div class="serviceo-card">
-                    <div class="serviceo-icon">🏦</div>
-                    <h3>Avalúo para Hipoteca</h3>
-                    <p>Evaluaciones aceptadas por entidades financieras y bancos.</p>
+                <div class="service-card">
+                    <h3><span class="service-icon">🌾</span> Avalúos Rurales</h3>
+                    <p>Avalúos especializados en propiedades rurales, fincas, terrenos agrícolas y proyectos de desarrollo rural.</p>
                 </div>
-                <div class="serviceo-card">
-                    <div class="serviceo-icon">🛡️</div>
-                    <h3>Avalúo para Seguros</h3>
-                    <p>Tasaciones para pólizas de seguros de propiedades.</p>
+                <div class="service-card">
+                    <h3><span class="service-icon">🏙️</span> Avalúos Urbanos</h3>
+                    <p>Valoración de propiedades urbanas: casas, apartamentos, locales comerciales, oficinas y desarrollos urbanísticos.</p>
                 </div>
-                <div class="serviceo-card">
-                    <div class="serviceo-icon">💼</div>
-                    <h3>Avalúo Corporativo</h3>
-                    <p>Valuación de portafolios inmobiliarios empresariales.</p>
+                <div class="service-card">
+                    <h3><span class="service-icon">🏗️</span> Avalúos para Proyectos</h3>
+                    <p>Avalúos técnicos para estudios de factibilidad, desarrollo de proyectos inmobiliarios y análisis de inversión.</p>
                 </div>
-                <div class="serviceo-card">
-                    <div class="serviceo-icon">📊</div>
-                    <h3>Estudios de Mercado</h3>
-                    <p>Análisis de mercado inmobiliario y tendencias de precios.</p>
+                <div class="service-card">
+                    <h3><span class="service-icon">📊</span> Avalúos para Seguros</h3>
+                    <p>Valoración de bienes para pólizas de seguro, indemnizaciones, siniestros y actualizaciones de coberturas.</p>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h3>¿Necesitas un Avalúo Profesional?</h3>
+                <p>Completa nuestro formulario de pre-avalúo en 2 minutos y recibe una cotización personalizada</p>
+                <button class="btn-primary-header" onclick="openPreAvaluoModal()">
+                    📝 Iniciar Pre-Avalúo Gratis
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Testimonios de Nuestros Clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Excelente profesional. El avalúo fue entregado a tiempo y con toda la documentación requerida por el banco. Muy recomendado."</p>
+                    <strong>- María González</strong>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Servicio impecable para el avalúo de mi finca. Gran conocimiento técnico y atención personalizada. Totalmente satisfecho."</p>
+                    <strong>- Carlos Pérez</strong>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Muy profesional en el proceso de sucesión. Explicó todo claramente y el avalúo fue aceptado sin problema por la notaría."</p>
+                    <strong>- Ana Rodríguez</strong>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROCESO -->
-    <section class="proceso" id="proceso">
+    <!-- FAQ Section -->
+    <section class="faq">
         <div class="container">
-            <h2 class="section-title">Nuestro Proceso</h2>
-            <div class="proceso-grid">
-                <div class="paso">
-                    <div class="paso-numero">1</div>
-                    <h3>Consulta Inicial</h3>
-                    <p>Contacto y recopilación de información sobre la propiedad a avaluar.</p>
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Cuánto tiempo toma un avalúo?</span>
+                    <span class="faq-toggle">▼</span>
                 </div>
-                <div class="paso">
-                    <div class="paso-numero">2</div>
-                    <h3>Inspección Física</h3>
-                    <p>Visita profesional a la propiedad para evaluación detallada.</p>
+                <div class="faq-answer">
+                    <p>El tiempo de entrega varía según el tipo de avalúo: avalúos urbanos simples entre 3-5 días hábiles, avalúos rurales o comerciales complejos entre 7-10 días hábiles. Ofrecemos servicio express en casos urgentes.</p>
                 </div>
-                <div class="paso">
-                    <div class="paso-numero">3</div>
-                    <h3>Análisis de Mercado</h3>
-                    <p>Investigación de precios comparables en la zona.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Qué documentos necesito para solicitar un avalúo?</span>
+                    <span class="faq-toggle">▼</span>
                 </div>
-                <div class="paso">
-                    <div class="paso-numero">4</div>
-                    <h3>Cálculo de Valor</h3>
-                    <p>Aplicación de metodologías profesionales de valuación.</p>
+                <div class="faq-answer">
+                    <p>Generalmente necesitas: escritura pública o certificado de tradición, cédula de ciudadanía del propietario, y certificado de libertad y tradición actualizado. Para algunos casos específicos podemos requerir documentos adicionales.</p>
                 </div>
-                <div class="paso">
-                    <div class="paso-numero">5</div>
-                    <h3>Redacción del Informe</h3>
-                    <p>Elaboración del documento técnico con toda la información.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Los avalúos tienen validez legal?</span>
+                    <span class="faq-toggle">▼</span>
                 </div>
-                <div class="paso">
-                    <div class="paso-numero">6</div>
-                    <h3>Entrega y Asesoría</h3>
-                    <p>Entrega del avalúo y explicación de resultados.</p>
+                <div class="faq-answer">
+                    <p>Sí, todos nuestros avalúos cuentan con certificación ANA (Asociación Nacional de Avaluadores) y tienen plena validez legal ante bancos, notarías, juzgados y entidades gubernamentales.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Realizan avalúos en todo Antioquia?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, realizamos avalúos en todo el departamento de Antioquia, incluyendo Medellín, Valle de Aburrá y municipios cercanos. Para zonas alejadas, se coordina agenda y desplazamiento.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Cuál es el costo de un avalúo?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>El costo varía según el tipo de propiedad, ubicación y complejidad del avalúo. Completa nuestro formulario de pre-avalúo para recibir una cotización personalizada sin compromiso.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CASOS DE ÉXITO -->
-    <section class="casos" id="caso">
-        <div class="container">
-            <h2 class="section-title">Casos de Éxito</h2>
-            <div class="casos-grid">
-                <div class="caso-card">
-                    <div class="caso header">
-                        <div class="avatar">CM</div>
-                        <div class="caso info">
-                            <h4>Carlos Méndez</h4>
-                            <p>Bogotá - 2024</p>
-                        </div>
-                    </div>
-                    <p>"El avalúo de Javier fue clave para cerrar nuestra transacción inmobiliaria. Profesional, rápido y confiable. Altamente recomendado."</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-
-                <div class="caso-card">
-                    <div class="caso header">
-                        <div class="avatar">CR</div>
-                        <div class="caso info">
-                            <h4>Catalina Rojas</h4>
-                            <p>Medellín - 2024</p>
-                        </div>
-                    </div>
-                    <p>"Necesitaba un avalúo urgente para refinanciar mi propiedad. Javier entregó en 24 horas sin comprometer la calidad. Excelente servicio."</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-
-                <div class="caso-card">
-                    <div class="caso header">
-                        <div class="avatar">RG</div>
-                        <div class="caso info">
-                            <h4>Roberto García</h4>
-                            <p>Cali - 2024</p>
-                        </div>
-                    </div>
-                    <p>"Para mi inversión inmobiliaria necesitaba análisis de múltiples propiedades. Javier nos asesoró magistralmente. Un profesional de verdad."</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="contacto" id="contacto">
-        <div class="container">
-            <h2 class="section-title">Solicita Tu Avalúo</h2>
-            <form class="formulario" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="nombre">Tu Nombre *</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono *</label>
-                    <input type="tel" id="telefono" name="telefono" required>
-                </div>
-                <div class="form-group">
-                    <label for="propiedad">Tipo de Propiedad *</label>
-                    <input type="text" id="propiedad" name="propiedad" placeholder="Ej: Apartamento, Casa, Comercial" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Detalles Adicionales</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más sobre la propiedad..."></textarea>
-                </div>
-                <button type="submit" class="form-submit">Enviar Solicitud</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Javier Estrepo</h4>
-                    <p>Avaluador profesional certificado con 40+ años de experiencia en el mercado inmobiliario colombiano.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Servicios</h4>
-                    <p><a href="#servicios">Avalúos Residenciales</a></p>
-                    <p><a href="#servicios">Avalúos Comerciales</a></p>
-                    <p><a href="#servicios">Estudios de Mercado</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <p>📞 Teléfono: +57 310 833 8666</p>
-                    <p>📧 Email: jrtcia@gmail.com</p>
-                    <p><a href="https://wa.me/573108338666">💬 WhatsApp: +57 310 833 8666</a></p>
-                </div>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Javier Restrepo - Avaluador Profesional ANA</h3>
+                <p>📍 Antioquia, Colombia</p>
+                <p>📱 WhatsApp: <a href="https://wa.me/573023074568" style="color: white; text-decoration: underline;">+57 302 307 4568</a></p>
+                <p>✉️ Email: contacto@javierrestrepo-avaluos.com</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Javier Estrepo - Avalúos Profesionales. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://wa.me/573023074568" class="social-link" target="_blank" title="WhatsApp">📱</a>
+                <a href="mailto:contacto@javierrestrepo-avaluos.com" class="social-link" title="Email">✉️</a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.8;">© 2024 Javier Restrepo. Todos los derechos reservados.</p>
+            <p style="opacity: 0.7; font-size: 0.9rem;">Avaluador Certificado por ANA - Asociación Nacional de Avaluadores</p>
         </div>
     </footer>
 
-    <!-- WHATSAPP FLOTANTE -->
-    <a href="https://wa.me/573108338666" class="whatsapp-flotante" title="Contáctanos por WhatsApp">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573023074568?text=Hola%20Javier,%20necesito%20información%20sobre%20avalúos" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
         💬
     </a>
 
+    <!-- Pre-Avalúo Modal -->
+    <div id="preAvaluoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Formulario de Pre-Avalúo</h2>
+                <p>Completa los siguientes datos para recibir tu cotización personalizada</p>
+                <span class="close" onclick="closePreAvaluoModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-step">
+                        <div class="step-circle active" id="step1Circle">1</div>
+                        <div class="step-label active" id="step1Label">Datos Personales</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-circle" id="step2Circle">2</div>
+                        <div class="step-label" id="step2Label">Tipo de Propiedad</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-circle" id="step3Circle">3</div>
+                        <div class="step-label" id="step3Label">Propósito</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-circle" id="step4Circle">4</div>
+                        <div class="step-label" id="step4Label">Resumen</div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <form id="preAvaluoForm">
+                    <!-- Step 1: Datos Personales -->
+                    <div class="form-step active" id="step1">
+                        <h3 style="color: #1e3c72; margin-bottom: 1.5rem;">Datos Personales</h3>
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez García">
+                            <span class="error-message">Por favor ingresa tu nombre completo</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / WhatsApp <span class="required">*</span></label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 3001234567">
+                            <small>Ingresa tu número sin espacios ni guiones</small>
+                            <span class="error-message">Por favor ingresa un número de teléfono válido</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="Ej: correo@ejemplo.com">
+                            <span class="error-message">Por favor ingresa un correo válido</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad / Municipio <span class="required">*</span></label>
+                            <input type="text" id="ciudad" name="ciudad" required placeholder="Ej: Medellín, Envigado, Rionegro">
+                            <small>Ubicación de la propiedad a avaluar</small>
+                            <span class="error-message">Por favor ingresa la ciudad</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Tipo de Propiedad -->
+                    <div class="form-step" id="step2">
+                        <h3 style="color: #1e3c72; margin-bottom: 1.5rem;">Tipo de Propiedad</h3>
+
+                        <div class="form-group">
+                            <label>Selecciona el tipo de propiedad <span class="required">*</span></label>
+                            <div class="radio-grid">
+                                <div class="radio-option">
+                                    <input type="radio" id="casa" name="tipoPropiedad" value="Casa" required>
+                                    <label for="casa">
+                                        <div class="radio-icon">🏠</div>
+                                        <div class="radio-label-text">Casa</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="apartamento" name="tipoPropiedad" value="Apartamento">
+                                    <label for="apartamento">
+                                        <div class="radio-icon">🏢</div>
+                                        <div class="radio-label-text">Apartamento</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="finca" name="tipoPropiedad" value="Finca">
+                                    <label for="finca">
+                                        <div class="radio-icon">🌾</div>
+                                        <div class="radio-label-text">Finca / Rural</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="local" name="tipoPropiedad" value="Local Comercial">
+                                    <label for="local">
+                                        <div class="radio-icon">🏪</div>
+                                        <div class="radio-label-text">Local Comercial</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="oficina" name="tipoPropiedad" value="Oficina">
+                                    <label for="oficina">
+                                        <div class="radio-icon">💼</div>
+                                        <div class="radio-label-text">Oficina</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="lote" name="tipoPropiedad" value="Lote / Terreno">
+                                    <label for="lote">
+                                        <div class="radio-icon">🗺️</div>
+                                        <div class="radio-label-text">Lote / Terreno</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="bodega" name="tipoPropiedad" value="Bodega">
+                                    <label for="bodega">
+                                        <div class="radio-icon">🏭</div>
+                                        <div class="radio-label-text">Bodega</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="otro" name="tipoPropiedad" value="Otro">
+                                    <label for="otro">
+                                        <div class="radio-icon">🏗️</div>
+                                        <div class="radio-label-text">Otro</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <span class="error-message">Por favor selecciona el tipo de propiedad</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="direccion">Dirección Aproximada</label>
+                            <input type="text" id="direccion" name="direccion" placeholder="Ej: Calle 50 #45-30 o Vereda El Carmen">
+                            <small>Opcional: nos ayuda a calcular mejor la cotización</small>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Propósito del Avalúo -->
+                    <div class="form-step" id="step3">
+                        <h3 style="color: #1e3c72; margin-bottom: 1.5rem;">Propósito del Avalúo</h3>
+
+                        <div class="form-group">
+                            <label>¿Para qué necesitas el avalúo? <span class="required">*</span></label>
+                            <div class="radio-grid">
+                                <div class="radio-option">
+                                    <input type="radio" id="venta" name="proposito" value="Venta" required>
+                                    <label for="venta">
+                                        <div class="radio-icon">💰</div>
+                                        <div class="radio-label-text">Venta</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="compra" name="proposito" value="Compra">
+                                    <label for="compra">
+                                        <div class="radio-icon">🛒</div>
+                                        <div class="radio-label-text">Compra</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="credito" name="proposito" value="Crédito Bancario">
+                                    <label for="credito">
+                                        <div class="radio-icon">🏦</div>
+                                        <div class="radio-label-text">Crédito Bancario</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="sucesion" name="proposito" value="Sucesión">
+                                    <label for="sucesion">
+                                        <div class="radio-icon">⚖️</div>
+                                        <div class="radio-label-text">Sucesión</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="permuta" name="proposito" value="Permuta">
+                                    <label for="permuta">
+                                        <div class="radio-icon">🤝</div>
+                                        <div class="radio-label-text">Permuta</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="catastral" name="proposito" value="Catastral">
+                                    <label for="catastral">
+                                        <div class="radio-icon">📋</div>
+                                        <div class="radio-label-text">Catastral</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="seguro" name="proposito" value="Seguro">
+                                    <label for="seguro">
+                                        <div class="radio-icon">🛡️</div>
+                                        <div class="radio-label-text">Seguro</div>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="otroProposito" name="proposito" value="Otro">
+                                    <label for="otroProposito">
+                                        <div class="radio-icon">📊</div>
+                                        <div class="radio-label-text">Otro</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <span class="error-message">Por favor selecciona el propósito del avalúo</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comentarios">Comentarios Adicionales</label>
+                            <textarea id="comentarios" name="comentarios" placeholder="¿Hay algo más que debamos saber? (urgencia, detalles especiales, etc.)"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Resumen y Confirmación -->
+                    <div class="form-step" id="step4">
+                        <h3 style="color: #1e3c72; margin-bottom: 1.5rem;">Resumen de tu Solicitud</h3>
+
+                        <div class="summary-section">
+                            <h3>📋 Datos Personales</h3>
+                            <div class="summary-item">
+                                <span class="summary-label">Nombre:</span>
+                                <span class="summary-value" id="summaryNombre">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Teléfono:</span>
+                                <span class="summary-value" id="summaryTelefono">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Email:</span>
+                                <span class="summary-value" id="summaryEmail">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Ciudad:</span>
+                                <span class="summary-value" id="summaryCiudad">-</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-section">
+                            <h3>🏠 Información de la Propiedad</h3>
+                            <div class="summary-item">
+                                <span class="summary-label">Tipo de Propiedad:</span>
+                                <span class="summary-value" id="summaryTipoPropiedad">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Dirección:</span>
+                                <span class="summary-value" id="summaryDireccion">-</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-section">
+                            <h3>🎯 Propósito del Avalúo</h3>
+                            <div class="summary-item">
+                                <span class="summary-label">Para:</span>
+                                <span class="summary-value" id="summaryProposito">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Comentarios:</span>
+                                <span class="summary-value" id="summaryComentarios">-</span>
+                            </div>
+                        </div>
+
+                        <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+                            <p style="color: #1e3c72; font-weight: 600; margin-bottom: 0.5rem;">✓ ¿Qué sigue?</p>
+                            <p style="color: #666; font-size: 0.95rem; margin: 0;">Al enviar este formulario, recibirás una cotización personalizada por WhatsApp en menos de 2 horas. Nuestro equipo revisará tu solicitud y te contactará para coordinar los siguientes pasos.</p>
+                        </div>
+
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <div class="success-icon">✅</div>
+                            <h3>¡Solicitud Enviada Exitosamente!</h3>
+                            <p>Gracias por confiar en nosotros. Te contactaremos pronto por WhatsApp para brindarte tu cotización personalizada.</p>
+                            <a href="#" class="whatsapp-btn" id="whatsappFinalBtn">
+                                <span>💬</span>
+                                Abrir WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Form Navigation -->
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-prev" id="prevBtn" onclick="previousStep()" style="display: none;">
+                            ← Anterior
+                        </button>
+                        <button type="button" class="btn btn-next" id="nextBtn" onclick="nextStep()">
+                            Siguiente →
+                        </button>
+                        <button type="button" class="btn btn-submit" id="submitBtn" onclick="submitForm()" style="display: none;">
+                            📤 Enviar Solicitud
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script>
-        function handleSubmit(event) {
-            event.preventDefault();
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const telefono = document.getElementById('telefono').value;
-            const propiedad = document.getElementById('propiedad').value;
-            const mensaje = document.getElementById('mensaje').value;
+        let currentStep = 1;
+        const totalSteps = 4;
 
-            const mensaje_completo = `Hola Javier, tengo una solicitud de avalúo.
-Nombre: ${nombre}
-Email: ${email}
-Teléfono: ${telefono}
-Tipo de Propiedad: ${propiedad}
-Detalles: ${mensaje}`;
-
-            const whatsapp_url = `https://wa.me/573108338666?text=${encodeURIComponent(mensaje_completo)}`;
-            window.open(whatsapp_url, '_blank');
-
-            alert('¡Mensaje enviado! Se abrirá WhatsApp para confirmar tu solicitud.');
-            document.querySelector('.formulario').reset();
+        // Open Modal
+        function openPreAvaluoModal() {
+            document.getElementById('preAvaluoModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            currentStep = 1;
+            updateStepUI();
         }
+
+        // Close Modal
+        function closePreAvaluoModal() {
+            document.getElementById('preAvaluoModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            document.getElementById('preAvaluoForm').reset();
+            currentStep = 1;
+            document.getElementById('successMessage').style.display = 'none';
+            document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
+            document.getElementById('step1').classList.add('active');
+            updateStepUI();
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('preAvaluoModal');
+            if (event.target == modal) {
+                closePreAvaluoModal();
+            }
+        }
+
+        // Validate Current Step
+        function validateStep(step) {
+            let isValid = true;
+            const currentStepElement = document.getElementById('step' + step);
+            const requiredFields = currentStepElement.querySelectorAll('[required]');
+
+            requiredFields.forEach(field => {
+                const formGroup = field.closest('.form-group');
+
+                if (field.type === 'radio') {
+                    const radioGroup = currentStepElement.querySelectorAll(`[name="${field.name}"]`);
+                    const isChecked = Array.from(radioGroup).some(radio => radio.checked);
+                    if (!isChecked) {
+                        formGroup.classList.add('error');
+                        isValid = false;
+                    } else {
+                        formGroup.classList.remove('error');
+                    }
+                } else {
+                    if (!field.value.trim()) {
+                        formGroup.classList.add('error');
+                        isValid = false;
+                    } else {
+                        // Additional validation
+                        if (field.type === 'email' && !isValidEmail(field.value)) {
+                            formGroup.classList.add('error');
+                            isValid = false;
+                        } else if (field.type === 'tel' && !isValidPhone(field.value)) {
+                            formGroup.classList.add('error');
+                            isValid = false;
+                        } else {
+                            formGroup.classList.remove('error');
+                        }
+                    }
+                }
+            });
+
+            return isValid;
+        }
+
+        // Email Validation
+        function isValidEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Phone Validation
+        function isValidPhone(phone) {
+            const re = /^[0-9]{10}$/;
+            return re.test(phone.replace(/\s/g, ''));
+        }
+
+        // Next Step
+        function nextStep() {
+            if (validateStep(currentStep)) {
+                if (currentStep < totalSteps) {
+                    // Mark current as completed
+                    document.getElementById('step' + currentStep + 'Circle').classList.add('completed');
+                    document.getElementById('step' + currentStep + 'Label').classList.remove('active');
+
+                    currentStep++;
+
+                    // Activate new step
+                    document.getElementById('step' + currentStep + 'Circle').classList.add('active');
+                    document.getElementById('step' + currentStep + 'Label').classList.add('active');
+
+                    // If going to summary, update it
+                    if (currentStep === 4) {
+                        updateSummary();
+                    }
+
+                    updateStepUI();
+                }
+            }
+        }
+
+        // Previous Step
+        function previousStep() {
+            if (currentStep > 1) {
+                // Remove completed from current
+                document.getElementById('step' + currentStep + 'Circle').classList.remove('active');
+                document.getElementById('step' + currentStep + 'Label').classList.remove('active');
+
+                currentStep--;
+
+                // Activate previous step
+                document.getElementById('step' + currentStep + 'Circle').classList.remove('completed');
+                document.getElementById('step' + currentStep + 'Circle').classList.add('active');
+                document.getElementById('step' + currentStep + 'Label').classList.add('active');
+
+                updateStepUI();
+            }
+        }
+
+        // Update Step UI
+        function updateStepUI() {
+            // Hide all steps
+            document.querySelectorAll('.form-step').forEach(step => {
+                step.classList.remove('active');
+            });
+
+            // Show current step
+            document.getElementById('step' + currentStep).classList.add('active');
+
+            // Update buttons
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (currentStep === 1) {
+                prevBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'inline-flex';
+            }
+
+            if (currentStep === totalSteps) {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'inline-flex';
+            } else {
+                nextBtn.style.display = 'inline-flex';
+                submitBtn.style.display = 'none';
+            }
+        }
+
+        // Update Summary
+        function updateSummary() {
+            document.getElementById('summaryNombre').textContent = document.getElementById('nombre').value || '-';
+            document.getElementById('summaryTelefono').textContent = document.getElementById('telefono').value || '-';
+            document.getElementById('summaryEmail').textContent = document.getElementById('email').value || '-';
+            document.getElementById('summaryCiudad').textContent = document.getElementById('ciudad').value || '-';
+
+            const tipoPropiedad = document.querySelector('input[name="tipoPropiedad"]:checked');
+            document.getElementById('summaryTipoPropiedad').textContent = tipoPropiedad ? tipoPropiedad.value : '-';
+
+            document.getElementById('summaryDireccion').textContent = document.getElementById('direccion').value || 'No especificada';
+
+            const proposito = document.querySelector('input[name="proposito"]:checked');
+            document.getElementById('summaryProposito').textContent = proposito ? proposito.value : '-';
+
+            document.getElementById('summaryComentarios').textContent = document.getElementById('comentarios').value || 'Ninguno';
+        }
+
+        // Submit Form
+        function submitForm() {
+            const formData = {
+                nombre: document.getElementById('nombre').value,
+                telefono: document.getElementById('telefono').value,
+                email: document.getElementById('email').value,
+                ciudad: document.getElementById('ciudad').value,
+                tipoPropiedad: document.querySelector('input[name="tipoPropiedad"]:checked').value,
+                direccion: document.getElementById('direccion').value || 'No especificada',
+                proposito: document.querySelector('input[name="proposito"]:checked').value,
+                comentarios: document.getElementById('comentarios').value || 'Ninguno'
+            };
+
+            // Create WhatsApp message
+            const whatsappMessage = `🏠 *NUEVA SOLICITUD DE PRE-AVALÚO*%0A%0A` +
+                `👤 *Datos Personales:*%0A` +
+                `Nombre: ${formData.nombre}%0A` +
+                `Teléfono: ${formData.telefono}%0A` +
+                `Email: ${formData.email}%0A` +
+                `Ciudad: ${formData.ciudad}%0A%0A` +
+                `🏠 *Información de la Propiedad:*%0A` +
+                `Tipo: ${formData.tipoPropiedad}%0A` +
+                `Dirección: ${formData.direccion}%0A%0A` +
+                `🎯 *Propósito del Avalúo:*%0A` +
+                `Para: ${formData.proposito}%0A` +
+                `Comentarios: ${formData.comentarios}%0A%0A` +
+                `_Solicitud enviada desde el formulario web_`;
+
+            const whatsappURL = `https://wa.me/573023074568?text=${whatsappMessage}`;
+
+            // Update WhatsApp button
+            document.getElementById('whatsappFinalBtn').href = whatsappURL;
+
+            // Hide form, show success message
+            document.querySelectorAll('.summary-section').forEach(section => section.style.display = 'none');
+            document.querySelector('.form-navigation').style.display = 'none';
+            document.querySelectorAll('.summary-section + div').forEach(div => {
+                if (!div.classList.contains('success-message')) {
+                    div.style.display = 'none';
+                }
+            });
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Mark step as completed
+            document.getElementById('step4Circle').classList.add('completed');
+
+            // Optional: Auto-redirect to WhatsApp after 3 seconds
+            setTimeout(() => {
+                if (confirm('¿Deseas abrir WhatsApp ahora para confirmar tu solicitud?')) {
+                    window.open(whatsappURL, '_blank');
+                }
+            }, 2000);
+        }
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Open clicked FAQ if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Remove error on input
+        document.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('input', function() {
+                const formGroup = this.closest('.form-group');
+                if (formGroup) {
+                    formGroup.classList.remove('error');
+                }
+            });
+
+            if (field.type === 'radio') {
+                field.addEventListener('change', function() {
+                    const formGroup = this.closest('.form-group');
+                    if (formGroup) {
+                        formGroup.classList.remove('error');
+                    }
+                });
+            }
+        });
+
+        // Google Analytics (placeholder - replace with your GA ID)
+        // window.dataLayer = window.dataLayer || [];
+        // function gtag(){dataLayer.push(arguments);}
+        // gtag('js', new Date());
+        // gtag('config', 'GA_MEASUREMENT_ID');
     </script>
 </body>
 </html>
